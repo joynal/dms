@@ -2,8 +2,8 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class CourseResult extends Model {
+class User extends Model {
 
-	//
+    protected $guarded = [];
 
 }
