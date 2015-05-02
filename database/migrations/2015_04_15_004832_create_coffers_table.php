@@ -13,6 +13,8 @@ class CreateCoffersTable extends Migration {
 	public function up()
 	{
 		Schema::create('coffers', function(Blueprint $table) {
+            $table->engine = 'InnoDB';
+
             $table->increments('id');
             $table->string('program', 10);
             $table->string('semester', 15);

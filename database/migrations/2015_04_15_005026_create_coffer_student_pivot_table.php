@@ -14,6 +14,8 @@ class CreateCofferStudentPivotTable extends Migration {
 	{
 		Schema::create('coffer_student', function(Blueprint $table)
 		{
+            $table->engine = 'InnoDB';
+
 			$table->integer('coffer_id')->unsigned()->index();
 			$table->foreign('coffer_id')->references('id')->on('coffers')->onDelete('cascade');
 			$table->integer('student_id')->unsigned()->index();

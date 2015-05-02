@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateExamSchedualFacultyPivotTable extends Migration {
+class CreateExamScheduleFacultyPivotTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,13 +12,14 @@ class CreateExamSchedualFacultyPivotTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('exam_schedual_faculty', function(Blueprint $table)
+		Schema::create('exam_schedule_faculty', function(Blueprint $table)
 		{
-			$table->integer('exam_schedual_id')->unsigned()->index();
-			$table->foreign('exam_schedual_id')->references('id')->on('exam_scheduals')->onDelete('cascade');
+            $table->engine = 'InnoDB';
+
+			$table->integer('exam_schedule_id')->unsigned()->index();
+			$table->foreign('exam_schedule_id')->references('id')->on('exam_schedules')->onDelete('cascade');
 			$table->integer('faculty_id')->unsigned()->index();
 			$table->foreign('faculty_id')->references('id')->on('faculties')->onDelete('cascade');
-			$table->string('status', 5);
 		});
 	}
 
@@ -29,7 +30,7 @@ class CreateExamSchedualFacultyPivotTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('exam_schedual_faculty');
+		Schema::drop('exam_schedule_faculty');
 	}
 
 }

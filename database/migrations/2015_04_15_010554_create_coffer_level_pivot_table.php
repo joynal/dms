@@ -14,6 +14,8 @@ class CreateCofferLevelPivotTable extends Migration {
 	{
 		Schema::create('coffer_level', function(Blueprint $table)
 		{
+            $table->engine = 'InnoDB';
+
 			$table->integer('coffer_id')->unsigned()->index();
 			$table->foreign('coffer_id')->references('id')->on('coffers')->onDelete('cascade');
 			$table->integer('level_id')->unsigned()->index();

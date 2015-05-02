@@ -13,6 +13,8 @@ class CreateCourseResultsTable extends Migration {
 	public function up()
 	{
 		Schema::create('course_results', function(Blueprint $table) {
+            $table->engine = 'InnoDB';
+
             $table->increments('id');
             $table->integer('coffer_id', false, true);
             $table->integer('student_id', false, true);
@@ -23,7 +25,7 @@ class CreateCourseResultsTable extends Migration {
             $table->timestamps();
 
             $table->foreign('coffer_id')->references('id')->on('coffers')->onDelete('cascade');
-            $table->foreign('student_id')->references('id')->on('coffers');
+            $table->foreign('student_id')->references('id')->on('students');
         });
 	}
 

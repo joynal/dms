@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateClassSchedualsTable extends Migration {
+class CreateClassSchedulesTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,7 +12,9 @@ class CreateClassSchedualsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('class_scheduals', function(Blueprint $table) {
+		Schema::create('class_schedules', function(Blueprint $table) {
+            $table->engine = 'InnoDB';
+
             $table->increments('id');
             $table->integer('coffer_id', false, true);
             $table->string('day', 5);
@@ -33,11 +35,11 @@ class CreateClassSchedualsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::table('class_scheduals', function(Blueprint $table) {
-			$table->dropForeign('class_scheduals_coffer_id_foreign');
+		Schema::table('class_schedules', function(Blueprint $table) {
+			$table->dropForeign('class_schedules_coffer_id_foreign');
 		});
 		
-		Schema::drop('class_scheduals');
+		Schema::drop('class_schedules');
 	}
 
 }

@@ -21,10 +21,10 @@ class CreateUsersTable extends Migration {
 			$table->string('first_name', 30);
 			$table->string('last_name', 30);
 			$table->string('gender', 1);
-			$table->string('sociolite');
+			$table->string('socialite');
 			$table->tinyInteger('contact')->unsigned();
+            $table->string('image');
 			$table->string('email')->unique();
-			$table->string('image');
 			$table->string('password', 60);
 			$table->rememberToken();
 			$table->timestamps();

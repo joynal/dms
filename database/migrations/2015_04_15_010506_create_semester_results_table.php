@@ -13,6 +13,8 @@ class CreateSemesterResultsTable extends Migration {
 	public function up()
 	{
 		Schema::create('semester_results', function(Blueprint $table) {
+            $table->engine = 'InnoDB';
+
             $table->increments('id');
             $table->string('name', 10);
             $table->integer('student_id', false, true);
