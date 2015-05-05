@@ -3,7 +3,7 @@
 use Closure;
 use Illuminate\Http\RedirectResponse;
 
-class isAdmin {
+class isFaculty {
 
 	/**
 	 * Handle an incoming request.
@@ -14,13 +14,13 @@ class isAdmin {
 	 */
 	public function handle($request, Closure $next)
 	{
-		$user = $request->user();
+        $user = $request->user();
 
-		if ($user && $user->isAdmin())
-		{
-			return $next($request);
-		}
-		return new RedirectResponse(url('/'));
+        if($user && $user->isFaculty())
+        {
+            return $next( $request );
+        }
+        return new RedirectResponse(url('/'));
 	}
 
 }

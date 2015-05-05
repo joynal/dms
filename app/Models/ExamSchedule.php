@@ -1,4 +1,4 @@
-<?php namespace App;
+<?php namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -9,11 +9,11 @@ class ExamSchedule extends Model {
     protected $guarded = [];
 
     public function courseOffer(){
-        return $this->belongsTo('App\Coffer');
+        return $this->belongsTo('App\Models\Coffer');
     }
 
     public function faculties(){
-        return $this->belongsToMany('App\Faculty', 'exam_schedule_faculty', 'exam_schedule_id', 'faculty_id');
+        return $this->belongsToMany('App\Models\Faculty', 'exam_schedule_faculty', 'exam_schedule_id', 'faculty_id');
     }
 
 }

@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers\Auth;
 
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Contracts\Auth\Registrar;
@@ -20,13 +21,12 @@ class AuthController extends Controller {
 
 	use AuthenticatesAndRegistersUsers;
 
-	/**
-	 * Create a new authentication controller instance.
-	 *
-	 * @param  \Illuminate\Contracts\Auth\Guard  $auth
-	 * @param  \Illuminate\Contracts\Auth\Registrar  $registrar
-	 * @return void
-	 */
+    protected $redirectTo = 'admin';
+
+    /**
+     * @param Guard $auth
+     * @param Registrar $registrar
+     */
 	public function __construct(Guard $auth, Registrar $registrar)
 	{
 		$this->auth = $auth;
@@ -34,6 +34,36 @@ class AuthController extends Controller {
 
 		$this->middleware('guest', ['except' => 'getLogout']);
 	}
+
+    public function postLogin(Request $request)
+    {
+        $this->validate($request, [
+            'email' => 'required|email', 'password' => 'required',
+        ]);
+
+        $credentials = $request->only('email', 'password');
+
+        if ($this->auth->attempt($credentials, $request->has('remember')))
+        {
+            if($this->auth->user()->type === 'admin'){
+                return redirect()->intended('admin');
+            }
+
+            if($this->auth->user()->type === 'student'){
+                return redirect()->intended('student');
+            }
+
+            if($this->auth->user()->type === 'faculty'){
+                return redirect()->intended('faculty');
+            }
+        }
+
+        return redirect($this->loginPath())
+            ->withInput($request->only('email', 'remember'))
+            ->withErrors([
+                'email' => $this->getFailedLoginMessage(),
+            ]);
+    }
 
 
 }

@@ -1,4 +1,4 @@
-<?php namespace App;
+<?php namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -9,31 +9,31 @@ class Coffer extends Model {
     protected $guarded = [];
 
     public function students(){
-        return $this->belongsToMany('App\Student', 'coffer_student', 'coffer_id', 'student_id');
+        return $this->belongsToMany('App\Models\Student', 'coffer_student', 'coffer_id', 'student_id');
     }
 
     public function examSchedules(){
-        return $this->hasMany('App\ExamSchedule');
+        return $this->hasMany('App\Models\ExamSchedule');
     }
 
     public function classSchedules(){
-        return $this->hasMany('App\ClassSchedule');
+        return $this->hasMany('App\Models\ClassSchedule');
     }
 
     public function courseResults(){
-        return $this->hasMany('App\CourseResult');
+        return $this->hasMany('App\Models\CourseResult');
     }
 
     public function levels(){
-        return $this->belongsToMany('App\Level', 'coffer_level', 'coffer_id', 'level_id');
+        return $this->belongsToMany('App\Models\Level', 'coffer_level', 'coffer_id', 'level_id');
     }
 
     public function course(){
-        return $this->belongsTo('App\Course');
+        return $this->belongsTo('App\Models\Course');
     }
 
     public function faculty(){
-        return $this->belongsTo('App\Faculty');
+        return $this->belongsTo('App\Models\Faculty');
     }
 
 }

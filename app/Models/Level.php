@@ -1,4 +1,4 @@
-<?php namespace App;
+<?php namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -9,11 +9,11 @@ class Level extends Model {
     protected $guarded = [];
 
     public function students(){
-        return $this->hasMany('App\Student');
+        return $this->hasMany('App\Models\Student');
     }
 
     public function courseOffers(){
-        return $this->belongsToMany('App\Coffer', 'coffer_level', 'coffer_id', 'level_id');
+        return $this->belongsToMany('App\Models\Coffer', 'coffer_level', 'coffer_id', 'level_id');
     }
 
 }

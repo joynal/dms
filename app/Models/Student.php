@@ -1,4 +1,4 @@
-<?php namespace App;
+<?php namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -15,14 +15,14 @@ class Student extends Model {
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function courseResults(){
-        return $this->hasMany('App\CourseResult');
+        return $this->hasMany('App\Models\CourseResult');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function semesterResults(){
-        return $this->hasMany('App\SemesterResult');
+        return $this->hasMany('App\Models\SemesterResult');
     }
 
 
@@ -30,10 +30,10 @@ class Student extends Model {
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function courseOffers(){
-        return $this->belongsToMany('App\Coffer', 'coffer_student', 'coffer_id', 'student_id');
+        return $this->belongsToMany('App\Models\Coffer', 'coffer_student', 'coffer_id', 'student_id');
     }
 
     public function level(){
-        return $this->belongsTo('App\Level');
+        return $this->belongsTo('App\Models\Level');
     }
 }
