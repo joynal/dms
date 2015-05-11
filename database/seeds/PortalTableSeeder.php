@@ -8,6 +8,7 @@ class PortalTableSeeder extends Seeder {
 
     public function run()
     {
+        DB::table('users')->delete();
         User::create([
             'type'  => 'admin',
             'email' => 'admin@dms.dev',

@@ -20,6 +20,7 @@ class CreateStudentsTable extends Migration {
             $table->tinyInteger('batch', false, true)->length(3);
             $table->string('section', 1);
             $table->string('program', 10);
+            $table->string('reg_id', 12);
             $table->date('birth_date');
             $table->date('admission_date');
             $table->integer('level_id', false, true);

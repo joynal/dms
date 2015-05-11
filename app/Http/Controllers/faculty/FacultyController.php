@@ -1,11 +1,11 @@
-<?php namespace App\Http\Controllers;
+<?php namespace App\Http\Controllers\Faculty;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
-class StudentController extends Controller {
+class FacultyController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -14,7 +14,7 @@ class StudentController extends Controller {
 	 */
 	public function index()
 	{
-		return 'This is student dashboard';
+		return 'This is faculty dashboard';
 	}
 
 	/**

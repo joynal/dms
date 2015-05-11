@@ -1,11 +1,12 @@
-<?php namespace App\Http\Controllers;
+<?php namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
-class FacultyController extends Controller {
+class AdminController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -14,7 +15,8 @@ class FacultyController extends Controller {
 	 */
 	public function index()
 	{
-		return 'This is faculty dashboard';
+        $user = Auth::user()->toArray();
+		return view('admin.index', compact('user'));
 	}
 
 	/**
