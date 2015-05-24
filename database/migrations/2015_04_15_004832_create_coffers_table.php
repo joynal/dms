@@ -21,12 +21,16 @@ class CreateCoffersTable extends Migration {
             $table->integer('year', false, true)->length(4);
             $table->string('course_id');
             $table->integer('faculty_id', false, true);
+            $table->integer('semester_id', false, true);
             $table->timestamps();
 
             $table->foreign('course_id')->references('id')->on('courses')
 				->onDelete('cascade');
 
 			$table->foreign('faculty_id')->references('id')->on('faculties');
+
+            $table->foreign('semester_id')->references('id')->on('semesters')
+                ->onDelete('cascade');
         });
 	}
 

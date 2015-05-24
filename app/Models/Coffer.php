@@ -36,4 +36,8 @@ class Coffer extends Model {
         return $this->belongsTo('App\Models\Faculty');
     }
 
+    public function semester(){
+        return $this->belongsTo('App\Models\Semester');
+    }
+
 }

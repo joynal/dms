@@ -23,7 +23,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#"><span>Brand</span></a>
+                        <a class="navbar-brand" href="#"><span>DMS</span></a>
                     </div>
                     <div class="collapse navbar-collapse" id="navbar-ex-collapse">
                         <ul class="nav navbar-nav navbar-right">
@@ -31,13 +31,13 @@
                                 <a href="#">Home</a>
                             </li>
                             <li>
-                                <a href="#">Contacts</a>
+                                <a href="{!! url('/auth/login') !!}">Login</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="cover-image" style="background-image: url(https://unsplash.imgix.net/photo-1418065460487-3e41a6c84dc5?q=75&amp;fm=jpg&amp;s=127f3a3ccf4356b7f79594e05f6c840e);"></div>
+            <div class="cover-image" style="background-image: url()"></div>
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center">

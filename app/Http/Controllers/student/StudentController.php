@@ -14,7 +14,7 @@ class StudentController extends Controller {
 	 */
 	public function index()
 	{
-		return 'This is student dashboard';
+		return view('students.index');
 	}
 
 	/**

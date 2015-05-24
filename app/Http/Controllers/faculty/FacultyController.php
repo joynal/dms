@@ -14,7 +14,7 @@ class FacultyController extends Controller {
 	 */
 	public function index()
 	{
-		return 'This is faculty dashboard';
+		return view('faculties.index');
 	}
 
 	/**
