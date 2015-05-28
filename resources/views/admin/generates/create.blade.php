@@ -7,7 +7,7 @@
         'class' =>  'form-inline',
         'novalidate' => 'novalidate' ]) !!}
 
-        @include('generates.partials.form', ['submit_text' => 'Send'])
+        @include('admin.generates.partials.form', ['submit_text' => 'Send'])
 
     {!! Form::close() !!}
 

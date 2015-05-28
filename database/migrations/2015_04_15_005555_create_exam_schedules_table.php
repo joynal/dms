@@ -16,15 +16,19 @@ class CreateExamSchedulesTable extends Migration {
             $table->engine = 'InnoDB';
 
             $table->increments('id');
-            $table->integer('coffer_id', false, true);
             $table->string('name', 5);
             $table->dateTime('from');
             $table->datetime('to');
             $table->string('campus', 25);
+            $table->integer('coffer_id', false, true);
+            $table->integer('semester_id', false, true);
             $table->timestamps();
 
             $table->foreign('coffer_id')->references('id')->on('coffers')
 				->onDelete('restrict');
+
+            $table->foreign('semester_id')->references('id')->on('semesters')
+				->onDelete('cascade');
         });
 	}
 
@@ -38,6 +42,7 @@ class CreateExamSchedulesTable extends Migration {
 
 		Schema::table('exam_schedules', function(Blueprint $table) {
 			$table->dropForeign('exam_schedules_coffer_id_foreign');
+			$table->dropForeign('exam_schedules_semester_id_foreign');
 		});
 
 		Schema::drop('exam_schedules');

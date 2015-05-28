@@ -16,12 +16,12 @@ class CreateCourseResultsTable extends Migration {
             $table->engine = 'InnoDB';
 
             $table->increments('id');
-            $table->integer('coffer_id', false, true);
-            $table->integer('student_id', false, true);
             $table->float('mid');
             $table->float('final');
             $table->float('class_test');
             $table->float('other');
+            $table->integer('coffer_id', false, true);
+            $table->integer('student_id', false, true);
             $table->timestamps();
 
             $table->foreign('coffer_id')->references('id')->on('coffers')->onDelete('cascade');

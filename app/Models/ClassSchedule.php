@@ -15,4 +15,12 @@ class ClassSchedule extends Model {
         return $this->belongsTo('App\Models\Coffer');
     }
 
+    public function semester(){
+        return $this->belongsTo('App\Models\Semester');
+    }
+
+    public function levels(){
+        return $this->belongsToMany('App\Models\Level');
+    }
+
 }

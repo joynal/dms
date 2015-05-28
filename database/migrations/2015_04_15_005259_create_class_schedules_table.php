@@ -16,15 +16,19 @@ class CreateClassSchedulesTable extends Migration {
             $table->engine = 'InnoDB';
 
             $table->increments('id');
-            $table->integer('coffer_id', false, true);
             $table->string('day', 5);
             $table->dateTime('from');
             $table->datetime('to');
             $table->string('campus', 25);
+            $table->integer('coffer_id', false, true);
+            $table->integer('semester_id', false, true);
             $table->timestamps();
 
             $table->foreign('coffer_id')->references('id')->on('coffers')
 				->onDelete('restrict');
+
+            $table->foreign('semester_id')->references('id')->on('semesters')
+				->onDelete('cascade');
         });
 	}
 
@@ -37,6 +41,7 @@ class CreateClassSchedulesTable extends Migration {
 	{
 		Schema::table('class_schedules', function(Blueprint $table) {
 			$table->dropForeign('class_schedules_coffer_id_foreign');
+			$table->dropForeign('class_schedules_semester_id_foreign');
 		});
 		
 		Schema::drop('class_schedules');

@@ -18,7 +18,7 @@ class GeneratesController extends Controller {
         $bsc_students = Registration::whereProgram('bsc')->get();
         $msc_students = Registration::whereProgram('msc')->get();
 
-        return view('generates.index', compact('bsc_students', 'msc_students'));
+        return view('admin.generates.index', compact('bsc_students', 'msc_students'));
     }
 
     /**
@@ -26,7 +26,7 @@ class GeneratesController extends Controller {
      */
     public function create()
     {
-        return view('generates.create');
+        return view('admin.generates.create');
     }
 
 

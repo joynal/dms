@@ -14,8 +14,7 @@ class DatabaseSeeder extends Seeder {
 	{
 		Model::unguard();
 
-		 $this->call('PortalTableSeeder');
-		 //$this->call('TasksTableSeeder');
+		$this->call('DMSTableSeeder');
 	}
 
 }

@@ -16,4 +16,12 @@ class ExamSchedule extends Model {
         return $this->belongsToMany('App\Models\Faculty', 'exam_schedule_faculty', 'exam_schedule_id', 'faculty_id');
     }
 
+    public function semester(){
+        return $this->belongsTo('App\Models\Semester');
+    }
+
+    public function levels(){
+        return $this->belongsToMany('App\Models\Level');
+    }
+
 }

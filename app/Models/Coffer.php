@@ -6,7 +6,9 @@ class Coffer extends Model {
 
 	protected $table = 'coffers';
 
-    protected $guarded = [];
+    protected $fillable = [
+        'program', 'year', 'course_id', 'faculty_id', 'semester_id'
+    ];
 
     public function students(){
         return $this->belongsToMany('App\Models\Student', 'coffer_student', 'coffer_id', 'student_id');

@@ -19,7 +19,7 @@
             <h4>Generated users</h4>
             <table class="table">
                 @if( !$bsc_students->count())
-                    <p>There is B.Sc students yet</p>
+                    <p>There is no generated users yet</p>
                 @else
                     <tr>
                         <th>User type</th>

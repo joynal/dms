@@ -16,4 +16,11 @@ class Level extends Model {
         return $this->belongsToMany('App\Models\Coffer', 'coffer_level', 'coffer_id', 'level_id');
     }
 
+    public function classSchedules(){
+        return $this->belongsToMany('App\Models\ClassSchedules');
+    }
+
+    public function examSchedules(){
+        return $this->belongsToMany('App\Models\ExamSchedules');
+    }
 }
