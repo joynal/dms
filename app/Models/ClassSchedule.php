@@ -11,7 +11,7 @@ class ClassSchedule extends Model {
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function courseOffers(){
+    public function coffers(){
         return $this->belongsTo('App\Models\Coffer');
     }
 
@@ -20,7 +20,7 @@ class ClassSchedule extends Model {
     }
 
     public function levels(){
-        return $this->belongsToMany('App\Models\Level');
+        return $this->belongsToMany('App\Models\Level', 'class_schedule_level', 'class_schedule_id', 'level_id');
     }
 
 }

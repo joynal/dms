@@ -8,7 +8,7 @@ class ExamSchedule extends Model {
 
     protected $guarded = [];
 
-    public function courseOffer(){
+    public function coffer(){
         return $this->belongsTo('App\Models\Coffer');
     }
 
@@ -21,7 +21,7 @@ class ExamSchedule extends Model {
     }
 
     public function levels(){
-        return $this->belongsToMany('App\Models\Level');
+        return $this->belongsToMany('App\Models\Level', 'exam_schedule_level', 'exam_schedule_id', 'level_id');
     }
 
 }

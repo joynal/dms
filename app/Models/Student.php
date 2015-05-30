@@ -29,7 +29,7 @@ class Student extends Model {
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
-    public function courseOffers(){
+    public function coffers(){
         return $this->belongsToMany('App\Models\Coffer', 'coffer_student', 'coffer_id', 'student_id');
     }
 

@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateExam_scheduleLevelPivotTable extends Migration {
+class CreateExamScheduleLevelPivotTable extends Migration {
 
 	/**
 	 * Run the migrations.

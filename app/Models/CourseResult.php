@@ -12,7 +12,7 @@ class CourseResult extends Model {
         return $this->belongsTo('App\Models\Student');
     }
 
-    public function courseOffer(){
+    public function coffer(){
         return $this->belongsTo('App\Models\Coffer');
     }
 

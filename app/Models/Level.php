@@ -12,15 +12,15 @@ class Level extends Model {
         return $this->hasMany('App\Models\Student');
     }
 
-    public function courseOffers(){
+    public function coffers(){
         return $this->belongsToMany('App\Models\Coffer', 'coffer_level', 'coffer_id', 'level_id');
     }
 
     public function classSchedules(){
-        return $this->belongsToMany('App\Models\ClassSchedules');
+        return $this->belongsToMany('App\Models\ClassSchedules', 'class_schedule_level', 'class_schedule_id', 'level_id');
     }
 
     public function examSchedules(){
-        return $this->belongsToMany('App\Models\ExamSchedules');
+        return $this->belongsToMany('App\Models\ExamSchedules', 'exam_schedule_level', 'exam_schedule_id', 'level_id');
     }
 }

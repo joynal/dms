@@ -8,7 +8,7 @@ class Faculty extends Model {
 
     protected $guarded = [];
 
-    public function courseOffers(){
+    public function coffers(){
         return $this->hasMany('App\Models\Coffer');
     }
 

@@ -10,7 +10,7 @@ class Course extends Model {
         'id', 'name', 'credit', 'program'
     ];
 
-    public function courseOffers(){
+    public function coffers(){
         return $this->hasMany('App\Models\Coffer');
     }
 

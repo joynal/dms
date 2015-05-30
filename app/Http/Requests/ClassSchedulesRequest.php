@@ -11,7 +11,7 @@ class ClassSchedulesRequest extends Request {
 	 */
 	public function authorize()
 	{
-		return false;
+		return true;
 	}
 
 	/**
@@ -22,7 +22,13 @@ class ClassSchedulesRequest extends Request {
 	public function rules()
 	{
 		return [
-			//
+			'program'   => 'required',
+            'batch'     => 'required',
+            'course_id' => 'required',
+            'day'       => 'required',
+            'from'      => 'required',
+            'to'        => 'required',
+            'room'      => 'required'
 		];
 	}
 

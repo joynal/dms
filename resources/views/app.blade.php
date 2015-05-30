@@ -8,6 +8,10 @@
 
 	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 	<link href="{{ asset('/css/style.css') }}" rel="stylesheet">
+	<link href="{{ asset('/css/bootstrap-timepicker.css') }}" rel="stylesheet">
+    <script src="{{ asset('/js/jquery-2.1.3.min.js') }}"></script>
+    <script src="{{ asset('/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('/js/timepicker.js') }}"></script>
 
 	<!-- Fonts -->
 	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>

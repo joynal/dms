@@ -25,7 +25,7 @@
                 <td>{!! $schedule->to !!}</td>
                 <td>{!! $schedule->room !!}</td>
                 <td>
-                    @foreach($schedule->coffer->levels() as $level)
+                    @foreach($schedule->levels as $level)
                         <p>{!! $level->batch !!} : {!! $level->section !!}</p>
                     @endforeach
                 </td>
@@ -40,6 +40,11 @@
         'class' => 'form-inline',
         'novalidate' => 'novalidate'
     ]) !!}
-        @include('partials.form', ['submit_text' => 'create'])
+        @include('admin.class-schedules.partials.form', ['submit_text' => 'create'])
     {!! Form::close() !!}
+
+    <script>
+        $('#from').timepicker();
+        $('#to').timepicker();
+    </script>
 @endsection

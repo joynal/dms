@@ -2,42 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec91daea-1590-401c-a5c9-74865b7afff5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/Joynal.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/coffers/edit.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/courses/edit.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/semesters/edit.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/class-schedules/partials/form.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/coffers/partials/form.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/courses/partials/form.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/semesters/partials/form.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/class-schedules/index.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/courses/index.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/semesters/index.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/courses/show.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/semesters/show.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/sqlDataSources.xml" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\sites\dms\resources\views\generates\create.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/generates/create.blade.php" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\sites\dms\resources\views\generates\index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/generates/index.blade.php" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\sites\dms\resources\views\generates\partials\form.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/generates/partials/form.blade.php" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\sites\dms\resources\views\generates\partials\pre_form.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/generates/partials/pre_form.blade.php" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\sites\dms\resources\views\generates\registered.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/generates/registered.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2015_04_15_004644_create_semesters_table.php" afterPath="$PROJECT_DIR$/database/migrations/2015_04_15_004644_create_semesters_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2015_04_15_004832_create_coffers_table.php" afterPath="$PROJECT_DIR$/database/migrations/2015_04_15_004832_create_coffers_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2015_04_15_005259_create_class_schedules_table.php" afterPath="$PROJECT_DIR$/database/migrations/2015_04_15_005259_create_class_schedules_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2015_04_15_005555_create_exam_schedules_table.php" afterPath="$PROJECT_DIR$/database/migrations/2015_04_15_005555_create_exam_schedules_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2015_04_15_010238_create_course_results_table.php" afterPath="$PROJECT_DIR$/database/migrations/2015_04_15_010238_create_course_results_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/bootstrap-timepicker.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/timepicker.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2015_05_28_061800_create_class_schedule_level_pivot_table.php" afterPath="$PROJECT_DIR$/database/migrations/2015_05_28_061800_create_class_schedule_level_pivot_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2015_05_28_061819_create_exam_schedule_level_pivot_table.php" afterPath="$PROJECT_DIR$/database/migrations/2015_05_28_061819_create_exam_schedule_level_pivot_table.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/ClassSchedule.php" afterPath="$PROJECT_DIR$/app/Models/ClassSchedule.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Coffer.php" afterPath="$PROJECT_DIR$/app/Models/Coffer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Requests/ClassSchedulesRequest.php" afterPath="$PROJECT_DIR$/app/Http/Requests/ClassSchedulesRequest.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Course.php" afterPath="$PROJECT_DIR$/app/Models/Course.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/CourseResult.php" afterPath="$PROJECT_DIR$/app/Models/CourseResult.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/ExamSchedule.php" afterPath="$PROJECT_DIR$/app/Models/ExamSchedule.php" />
-      <change type="MODIFICATION" beforePath="C:\xampp\htdocs\sites\dms\app\Http\Controllers\Admin\GeneratesController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/GeneratesController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Faculty.php" afterPath="$PROJECT_DIR$/app/Models/Faculty.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Level.php" afterPath="$PROJECT_DIR$/app/Models/Level.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/PortalTableSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/PortalTableSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Semester.php" afterPath="$PROJECT_DIR$/app/Models/Semester.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Student.php" afterPath="$PROJECT_DIR$/app/Models/Student.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/app.blade.php" afterPath="$PROJECT_DIR$/resources/views/app.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/class-schedules/partials/form.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/class-schedules/partials/form.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/class-schedules/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/class-schedules/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sqlDataSources.xml" afterPath="$PROJECT_DIR$/.idea/sqlDataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dms.iws" />
@@ -74,11 +54,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Level.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Models/Level.php">
+      <file leaf-file-name="2015_05_28_061800_create_class_schedule_level_pivot_table.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2015_05_28_061800_create_class_schedule_level_pivot_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.79739505" vertical-offset="93" max-vertical-offset="896">
-              <caret line="23" column="52" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
+            <state vertical-scroll-proportion="0.16519174" vertical-offset="0" max-vertical-offset="1092">
+              <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -92,15 +72,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/css/style.css" />
-        <option value="$PROJECT_DIR$/resources/views/app.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Faculty/FacultyController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Student/StudentController.php" />
-        <option value="$PROJECT_DIR$/resources/views/students/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/faculties/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/pages/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/generates/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/generates/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/generates/create.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/GeneratesController.php" />
@@ -112,7 +83,6 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/CoffersController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/courses/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/courses/partials/form.blade.php" />
-        <option value="$PROJECT_DIR$/app/Models/Course.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/CourseRequest.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/courses/edit.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_04_15_004531_create_courses_table.php" />
@@ -136,13 +106,23 @@
         <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
         <option value="$PROJECT_DIR$/database/seeds/DMSTableSeeder.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/ClassScheduleController.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/class-schedules/partials/form.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/class-schedules/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/Coffer.php" />
+        <option value="$PROJECT_DIR$/public/css/bootstrap-timepicker.css" />
+        <option value="$PROJECT_DIR$/public/js/timepicker.js" />
+        <option value="$PROJECT_DIR$/resources/views/app.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/class-schedules/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/ClassSchedulesRequest.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/class-schedules/partials/form.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/ClassSchedule.php" />
+        <option value="$PROJECT_DIR$/app/Models/Course.php" />
         <option value="$PROJECT_DIR$/app/Models/ExamSchedule.php" />
+        <option value="$PROJECT_DIR$/app/Models/Faculty.php" />
+        <option value="$PROJECT_DIR$/app/Models/CourseResult.php" />
         <option value="$PROJECT_DIR$/app/Models/Level.php" />
+        <option value="$PROJECT_DIR$/app/Models/Student.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/ClassScheduleController.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2015_05_28_061819_create_exam_schedule_level_pivot_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2015_05_28_061800_create_class_schedule_level_pivot_table.php" />
       </list>
     </option>
   </component>
@@ -272,11 +252,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947975" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="1.0" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -288,13 +268,13 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947975" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32803467" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -320,90 +300,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/CofferRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8104197" vertical-offset="0" max-vertical-offset="1064">
-          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/CoffersController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.269175" vertical-offset="0" max-vertical-offset="1848">
-          <caret line="63" column="28" selection-start-line="63" selection-start-column="28" selection-end-line="63" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/coffers/partials/form.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49557522" vertical-offset="0" max-vertical-offset="896">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/coffers/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40520984" vertical-offset="0" max-vertical-offset="691">
-          <caret line="10" column="72" selection-start-line="10" selection-start-column="72" selection-end-line="10" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/courses/partials/form.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49557522" vertical-offset="0" max-vertical-offset="868">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Course.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36468884" vertical-offset="0" max-vertical-offset="691">
-          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/CourseRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6078148" vertical-offset="252" max-vertical-offset="1064">
-          <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/courses/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="691">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/semesters/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="691">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="13" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2015_04_15_004531_create_courses_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44573084" vertical-offset="168" max-vertical-offset="1176">
-          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/courses/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40520984" vertical-offset="0" max-vertical-offset="691">
-          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/CourseController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.7829233" vertical-offset="588" max-vertical-offset="2212">
-          <caret line="69" column="5" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.0535456" vertical-offset="0" max-vertical-offset="2352">
@@ -415,13 +311,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6078148" vertical-offset="420" max-vertical-offset="2240">
           <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/semesters/partials/form.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.041297935" vertical-offset="0" max-vertical-offset="784">
-          <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -502,13 +391,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2015_04_15_005259_create_class_schedules_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2561505" vertical-offset="308" max-vertical-offset="1540">
-          <caret line="43" column="57" selection-start-line="43" selection-start-column="57" selection-end-line="43" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2015_04_15_005555_create_exam_schedules_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.1751086" vertical-offset="392" max-vertical-offset="1568">
@@ -586,14 +468,133 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ClassScheduleController.php">
+    <entry file="file://$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Label.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23733719" vertical-offset="32" max-vertical-offset="1400">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="896">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/coffers/partials/form.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49557522" vertical-offset="0" max-vertical-offset="896">
+          <caret line="12" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="26" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/bootstrap-timepicker.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37168142" vertical-offset="0" max-vertical-offset="678">
+          <caret line="9" column="2761" selection-start-line="9" selection-start-column="2761" selection-end-line="9" selection-end-column="2761" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/timepicker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16519174" vertical-offset="0" max-vertical-offset="678">
+          <caret line="4" column="17041" selection-start-line="4" selection-start-column="17041" selection-end-line="4" selection-end-column="17041" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.53687316" vertical-offset="0" max-vertical-offset="2436">
+          <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/semesters/partials/form.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.90855455" vertical-offset="0" max-vertical-offset="784">
+          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/class-schedules/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.040521" vertical-offset="597" max-vertical-offset="1540">
+          <caret line="47" column="12" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/courses/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.71091443" vertical-offset="610" max-vertical-offset="1540">
+          <caret line="39" column="3" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/ClassSchedulesRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35166425" vertical-offset="457" max-vertical-offset="1148">
+          <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2015_04_15_005259_create_class_schedules_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.2561505" vertical-offset="308" max-vertical-offset="1540">
+          <caret line="43" column="57" selection-start-line="43" selection-start-column="57" selection-end-line="43" selection-end-column="57" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/class-schedules/partials/form.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6164978" vertical-offset="778" max-vertical-offset="1624">
+          <caret line="43" column="119" selection-start-line="43" selection-start-column="119" selection-end-line="43" selection-end-column="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/ClassSchedule.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="896">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Coffer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14905934" vertical-offset="653" max-vertical-offset="1428">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Course.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4862518" vertical-offset="0" max-vertical-offset="691">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/CourseResult.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.56729376" vertical-offset="0" max-vertical-offset="700">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/ExamSchedule.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33923304" vertical-offset="134" max-vertical-offset="924">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Faculty.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41297936" vertical-offset="0" max-vertical-offset="728">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Level.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44100294" vertical-offset="93" max-vertical-offset="896">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Registration.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="691">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -607,31 +608,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/courses/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Models/SemesterResult.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.6106194" vertical-offset="0" max-vertical-offset="1540">
-          <caret line="39" column="3" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/class-schedules/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6353111" vertical-offset="681" max-vertical-offset="1400">
-          <caret line="40" column="35" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Label.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="896">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="691">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Coffer.php">
+    <entry file="file://$PROJECT_DIR$/app/Models/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51374817" vertical-offset="401" max-vertical-offset="1428">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1484">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Student.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.64833575" vertical-offset="420" max-vertical-offset="1260">
+          <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ClassScheduleController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2758112" vertical-offset="1073" max-vertical-offset="1876">
+          <caret line="54" column="133" selection-start-line="54" selection-start-column="133" selection-end-line="54" selection-end-column="133" />
+          <folding>
+            <marker date="1432966607746" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1432966607746" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1432966607746" expanded="true" signature="-1:-1" placeholder=" @param Semester $semester ..." />
+            <marker date="1432966607746" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1432966607746" expanded="true" signature="-1:-1" placeholder=" @param ClassSchedulesRequest $request ..." />
+            <marker date="1432966607746" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1432966607746" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1432966607746" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1432966607746" expanded="true" signature="-1:-1" placeholder=" @param Semester $semester ..." />
+            <marker date="1432966607746" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -639,76 +652,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.44573084" vertical-offset="0" max-vertical-offset="1148">
           <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2015_05_28_061800_create_class_schedule_level_pivot_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1092">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1432793880804" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1432793880804" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1432793880804" expanded="true" signature="-1:-1" placeholder=" Run the migrations. ..." />
-            <marker date="1432793880804" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1432793880804" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1432793880804" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1432793880804" expanded="true" signature="-1:-1" placeholder=" Reverse the migrations. ..." />
-            <marker date="1432793880804" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1430530725341" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1430530725341" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430530725341" expanded="true" signature="-1:-1" placeholder=" Run the migrations. ..." />
+            <marker date="1430530725341" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1430530725341" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430530725341" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1430530725341" expanded="true" signature="-1:-1" placeholder=" Reverse the migrations. ..." />
+            <marker date="1430530725341" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2015_05_28_061819_create_exam_schedule_level_pivot_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.4862518" vertical-offset="336" max-vertical-offset="1092">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.16208394" vertical-offset="0" max-vertical-offset="1092">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
           <folding>
-            <marker date="1432793899350" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1432793899350" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1432793899350" expanded="true" signature="-1:-1" placeholder=" Run the migrations. ..." />
-            <marker date="1432793899350" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1432793899350" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1432793899350" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1432793899350" expanded="true" signature="-1:-1" placeholder=" Reverse the migrations. ..." />
-            <marker date="1432793899350" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1432967021708" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1432967021708" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1432967021708" expanded="true" signature="-1:-1" placeholder=" Run the migrations. ..." />
+            <marker date="1432967021708" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1432967021708" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1432967021708" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1432967021708" expanded="true" signature="-1:-1" placeholder=" Reverse the migrations. ..." />
+            <marker date="1432967021708" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/ClassSchedule.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2015_05_28_061800_create_class_schedule_level_pivot_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6078148" vertical-offset="168" max-vertical-offset="896">
-          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="23" selection-end-column="5" />
-          <folding>
-            <marker date="1432794056236" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1432794056236" expanded="true" signature="-1:-1" placeholder=" @return \Illuminate\Database\Eloquent\Relations\BelongsTo ..." />
-            <marker date="1432794056236" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1432794056236" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1432794056236" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/ExamSchedule.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7935103" vertical-offset="134" max-vertical-offset="924">
-          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-          <folding>
-            <marker date="1432794070370" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1432794070370" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1432794070370" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1432794070370" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1432794070370" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Level.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.79739505" vertical-offset="93" max-vertical-offset="896">
-          <caret line="23" column="52" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
+        <state vertical-scroll-proportion="0.16519174" vertical-offset="0" max-vertical-offset="1092">
+          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
           <folding />
         </state>
       </provider>
