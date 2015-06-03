@@ -28,17 +28,6 @@ class ClassScheduleController extends Controller {
      */
     public function store(ClassSchedulesRequest $request, Semester $semester)
     {
-        if (Level::whereBatch($request->get('batch'))->whereSection($request->get('section'))->first())
-        {
-            $level = Level::whereBatch($request->get('batch'))->whereSection($request->get('section'))->first();
-        } else
-        {
-            $level = new Level;
-            $level->batch = $request->get('batch');
-            $level->section = $request->get('section');
-            $level->save();
-        }
-
         $coffer = Coffer::whereCourseId($request->get('course_id'))->first();
 
         $class_schedule = new ClassSchedule;
@@ -49,8 +38,6 @@ class ClassScheduleController extends Controller {
         $class_schedule->coffer_id = $coffer->id;
         $class_schedule->semester_id = $semester->id;
         $class_schedule->save();
-
-        $class_schedule->levels()->attach($level);
 
         return Redirect::route('semesters.class-schedules.index', $semester->id)
                             ->with('message', 'Successfully class-schedule stored');

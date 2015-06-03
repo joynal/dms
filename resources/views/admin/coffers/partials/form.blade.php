@@ -22,15 +22,5 @@
 </div>
 
 <div class="form-group">
-    {!! Form::label('batch', 'Batch:') !!}
-    {!! Form::text('batch', Input::old('batch'), ['class' => 'form-control', 'placeholder' => 'batch']) !!}
-</div>
-
-<div class="form-group">
-    {!! Form::label('section', 'Section:') !!}
-    {!! Form::text('section', Input::old('section'), ['class' => 'form-control', 'placeholder' => 'section']) !!}
-</div>
-
-<div class="form-group">
     {!! Form::submit($submit_text, ['class'=>'btn primary']) !!}
 </div>

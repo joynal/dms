@@ -6,6 +6,7 @@ Route::model('coffers', 'App\Models\Coffer');
 Route::model('courses', 'App\Models\Course');
 Route::model('class-schedules', 'App\Models\ClassSchedule');
 Route::model('exam-schedules', 'App\Models\ExamSchedule');
+Route::model('levels', 'App\Models\Level');
 
 Route::bind('generates', function($value, $route){
     return App\Models\Registration::whereId($value)->first();
@@ -27,6 +28,10 @@ Route::bind('class-schedules', function($value, $route){
 
 Route::bind('exam-schedules', function($value, $route){
     return App\Models\ExamSchedule::whereId($value)->first();
+});
+
+Route::bind('levels', function($value, $route){
+    return App\Models\Level::whereId($value)->first();
 });
 
 Route::get('/', ['as' => 'home', 'uses' => 'PagesController@index']);
@@ -61,6 +66,9 @@ Route::resource('semesters', 'Admin\SemestersController');
 Route::resource('semesters.coffers', 'Admin\CoffersController');
 Route::resource('semesters.class-schedules', 'Admin\ClassScheduleController');
 Route::resource('semesters.exam-schedules', 'Admin\ExamScheduleController');
+Route::resource('semesters.coffers.levels', 'Admin\LevelCofferController');
+Route::resource('semesters.class-schedules.levels', 'Admin\LevelClassController');
+Route::resource('semesters.exam-schedules.levels', 'Admin\LevelExamController');
 
 Route::controllers([
     'auth' => 'Auth\AuthController',

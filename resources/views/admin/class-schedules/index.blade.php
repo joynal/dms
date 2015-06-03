@@ -30,6 +30,16 @@
                         <td>
                             @foreach($schedule->levels as $level)
                                 <p>{!! $level->batch !!} : {!! $level->section !!}</p>
+                                <p>
+                                    {!! Form::open([
+                                    'class' => 'form-inline',
+                                    'method' => 'DELETE',
+                                    'route' => ['semesters.class-schedules.levels.destroy', $semester->id, $schedule->id, $level->id ]]) !!}
+
+                                    {!! Form::submit('x',['class' => 'btn btn-danger']) !!}
+
+                                    {!! Form::close() !!}
+                                </p>
                             @endforeach
                         </td>
                         <td>
