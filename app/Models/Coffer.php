@@ -11,7 +11,7 @@ class Coffer extends Model {
     ];
 
     public function students(){
-        return $this->belongsToMany('App\Models\Student', 'coffer_student', 'coffer_id', 'student_id');
+        return $this->belongsToMany('App\Models\Student', 'coffer_student', 'coffer_id', 'student_id')->withPivot('status');
     }
 
     public function examSchedules(){

@@ -19,7 +19,10 @@ class CreateFacultiesTable extends Migration {
             $table->increments('id');
             $table->string('designation', 45);
             $table->date('joining_date');
+            $table->integer('user_id', false, true);
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

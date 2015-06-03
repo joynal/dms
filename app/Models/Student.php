@@ -30,10 +30,20 @@ class Student extends Model {
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function coffers(){
-        return $this->belongsToMany('App\Models\Coffer', 'coffer_student', 'coffer_id', 'student_id');
+        return $this->belongsToMany('App\Models\Coffer', 'coffer_student', 'coffer_id', 'student_id')->withPivot('status');
     }
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
     public function level(){
         return $this->belongsTo('App\Models\Level');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function user(){
+        return $this->belongsTo('App\Models\User');
     }
 }

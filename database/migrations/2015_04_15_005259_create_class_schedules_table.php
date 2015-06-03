@@ -17,8 +17,8 @@ class CreateClassSchedulesTable extends Migration {
 
             $table->increments('id');
             $table->string('day', 5);
-            $table->dateTime('from');
-            $table->datetime('to');
+            $table->time('from');
+            $table->time('to');
             $table->string('campus', 25);
             $table->integer('coffer_id', false, true);
             $table->integer('semester_id', false, true);

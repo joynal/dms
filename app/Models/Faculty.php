@@ -16,5 +16,9 @@ class Faculty extends Model {
         return $this->belongsToMany('App\Models\ExamSchedule', 'exam_schedule_faculty', 'exam_schedule_id', 'faculty_id');
     }
 
+    public function user(){
+        return $this->belongsTo('App\Models\User');
+    }
+
 
 }

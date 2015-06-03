@@ -11,7 +11,7 @@ class ClassSchedule extends Model {
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function coffers(){
+    public function coffer(){
         return $this->belongsTo('App\Models\Coffer');
     }
 

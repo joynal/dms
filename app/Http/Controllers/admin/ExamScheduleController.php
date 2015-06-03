@@ -1,5 +1,12 @@
 <?php namespace App\Http\Controllers\Admin;
 
+use Redirect;
+use App\Models\Semester;
+use App\Models\ExamSchedule;
+use App\Models\Coffer;
+use App\Models\Level;
+use App\Models\User;
+use App\Http\Requests\ExamSchedulesRequest;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -7,78 +14,57 @@ use Illuminate\Http\Request;
 
 class ExamScheduleController extends Controller {
 
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
-	public function index()
+    /**
+     * @param Semester $semester
+     * @return \Illuminate\View\View
+     */
+	public function index(Semester $semester)
 	{
-		//
+		return view('admin.exam-schedules.index', compact('semester'));
 	}
 
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
+    /**
+     * @param ExamSchedulesRequest $request
+     * @param Semester $semester
+     * @return mixed
+     */
+	public function store(ExamSchedulesRequest $request, Semester $semester)
 	{
-		//
+		$level = Level::whereBatch($request->get('batch'))->whereSection($request->get('section'))->first();
+
+        $coffer = Coffer::whereCourseId($request->get('course_id'))->first();
+
+        $faculty = User::whereUid($request->get('uid'))->first();
+
+        $exam = new ExamSchedule;
+        $exam->name = $request->get('name');
+        $exam->date = $request->get('date');
+        $exam->from = $request->get('from');
+        $exam->to = $request->get('to');
+        $exam->campus = $request->get('campus');
+        $exam->coffer_id = $coffer->id;
+        $exam->semester_id = $semester->id;
+        $exam->save();
+
+        $exam->levels()->attach($level);
+        $exam->faculties()->attach($faculty);
+
+        return Redirect::route('semesters.exam-schedules.index', $semester->id)
+                            ->with('message', 'Successfully exam-schedule created.');
 	}
 
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
-	 */
-	public function store()
+    /**
+     * @param Semester $semester
+     * @param ExamSchedule $schedule
+     * @return mixed
+     * @throws \Exception
+     */
+	public function destroy(Semester $semester, ExamSchedule $schedule)
 	{
-		//
-	}
+		$schedule->delete();
 
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
-		//
-	}
-
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		//
-	}
-
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
-	{
-		//
-	}
-
-	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function destroy($id)
-	{
-		//
+        return Redirect::route('semesters.exam-schedules.index', $semester->id)
+                            ->with('message', 'Successfully exam-schedule record deleted');
 	}
 
 }

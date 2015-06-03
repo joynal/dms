@@ -28,9 +28,9 @@ class ClassScheduleController extends Controller {
      */
     public function store(ClassSchedulesRequest $request, Semester $semester)
     {
-        if (Level::whereBatch($request->get('batch'))->whereSection($request->get('section'))->get())
+        if (Level::whereBatch($request->get('batch'))->whereSection($request->get('section'))->first())
         {
-            $level = Level::whereBatch($request->get('batch'))->whereSection($request->get('section'))->get();
+            $level = Level::whereBatch($request->get('batch'))->whereSection($request->get('section'))->first();
         } else
         {
             $level = new Level;
@@ -50,9 +50,10 @@ class ClassScheduleController extends Controller {
         $class_schedule->semester_id = $semester->id;
         $class_schedule->save();
 
-        $class_schedule->coffers()->attach($coffer);
+        $class_schedule->levels()->attach($level);
 
-        return Redirect::route('semesters.class-schedules.index', $semester->id)->with('message', 'Successfully class-schedule stored');
+        return Redirect::route('semesters.class-schedules.index', $semester->id)
+                            ->with('message', 'Successfully class-schedule stored');
     }
 
 
@@ -64,7 +65,8 @@ class ClassScheduleController extends Controller {
     {
         $classSchedule->delete();
 
-        return Redirect::route('semesters.class-schedules.index', $semester->id)->with('message', 'Successfully class-schedule record deleted');
+        return Redirect::route('semesters.class-schedules.index', $semester->id)
+                            ->with('message', 'Successfully class-schedule record deleted');
     }
 
 }

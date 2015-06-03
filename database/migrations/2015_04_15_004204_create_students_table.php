@@ -24,9 +24,11 @@ class CreateStudentsTable extends Migration {
             $table->date('birth_date');
             $table->date('admission_date');
             $table->integer('level_id', false, true);
+            $table->integer('user_id', false, true);
             $table->timestamps();
 
             $table->foreign('level_id')->references('id')->on('levels');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

@@ -17,8 +17,9 @@ class CreateExamSchedulesTable extends Migration {
 
             $table->increments('id');
             $table->string('name', 5);
-            $table->dateTime('from');
-            $table->datetime('to');
+            $table->date('date');
+            $table->time('from');
+            $table->time('to');
             $table->string('campus', 25);
             $table->integer('coffer_id', false, true);
             $table->integer('semester_id', false, true);

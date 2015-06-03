@@ -23,7 +23,7 @@
                         <td>{!! $coffer->program !!}</td>
                         <td>{!! $coffer->year !!}</td>
                         <td>{!! $coffer->course_id !!}</td>
-                        <td>{!! $coffer->faculty_id !!}</td>
+                        <td>{!! $coffer->faculty->user->first_name !!}</td>
                         <td>
                             {!! Form::open([
                             'class' => 'form-inline',

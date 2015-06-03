@@ -7,25 +7,25 @@ Route::model('courses', 'App\Models\Course');
 Route::model('class-schedules', 'App\Models\ClassSchedule');
 Route::model('exam-schedules', 'App\Models\ExamSchedule');
 
-Route::bind('generates', function($value){
+Route::bind('generates', function($value, $route){
     return App\Models\Registration::whereId($value)->first();
 });
-Route::bind('semesters', function($value){
+Route::bind('semesters', function($value, $route){
     return App\Models\Semester::whereId($value)->first();
 });
-Route::bind('coffers', function($value){
+Route::bind('coffers', function($value, $route){
     return App\Models\Coffer::whereId($value)->first();
 });
 
-Route::bind('courses', function($value){
+Route::bind('courses', function($value, $route){
     return App\Models\Course::whereId($value)->first();
 });
 
-Route::bind('class-schedules', function($value){
+Route::bind('class-schedules', function($value, $route){
     return App\Models\ClassSchedule::whereId($value)->first();
 });
 
-Route::bind('exam-schedules', function($value){
+Route::bind('exam-schedules', function($value, $route){
     return App\Models\ExamSchedule::whereId($value)->first();
 });
 

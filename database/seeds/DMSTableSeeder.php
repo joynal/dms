@@ -35,6 +35,15 @@ class DMSTableSeeder extends Seeder {
 
         User::create([
             'id'         => 1,
+            'type'       => 'admin',
+            'email'      => 'admin@dms.dev',
+            'password'   => bcrypt('admin'),
+            'created_at' => new DateTime,
+            'updated_at' => new DateTime
+        ]);
+
+        User::create([
+            'id'         => 2,
             'uid'        => 'F21132111001',
             'type'       => 'student',
             'first_name' => 'Mir',
@@ -47,7 +56,7 @@ class DMSTableSeeder extends Seeder {
         ]);
 
         User::create([
-            'id'         => 2,
+            'id'         => 3,
             'uid'        => 'M21132111002',
             'type'       => 'student',
             'first_name' => 'Sabbir',
@@ -60,7 +69,7 @@ class DMSTableSeeder extends Seeder {
         ]);
 
         User::create([
-            'id'         => 3,
+            'id'         => 4,
             'uid'        => 'M21132111003',
             'type'       => 'student',
             'first_name' => 'Mehedi',
@@ -73,7 +82,7 @@ class DMSTableSeeder extends Seeder {
         ]);
 
         User::create([
-            'id'         => 4,
+            'id'         => 5,
             'uid'        => 'F21132111004',
             'type'       => 'student',
             'first_name' => 'Shika sayed',
@@ -86,7 +95,7 @@ class DMSTableSeeder extends Seeder {
         ]);
 
         User::create([
-            'id'         => 5,
+            'id'         => 6,
             'uid'        => 'M21132111009',
             'type'       => 'student',
             'first_name' => 'Joynal',
@@ -99,8 +108,8 @@ class DMSTableSeeder extends Seeder {
         ]);
 
         User::create([
-            'id'         => 6,
-            'uid'        => 'T21132111001',
+            'id'         => 7,
+            'uid'        => 'T21132221001',
             'type'       => 'faculty',
             'first_name' => 'Uttam Kumar',
             'last_name'  => 'Dey',
@@ -112,23 +121,14 @@ class DMSTableSeeder extends Seeder {
         ]);
 
         User::create([
-            'id'         => 7,
-            'uid'        => 'T21132111002',
+            'id'         => 8,
+            'uid'        => 'T21132221002',
             'type'       => 'faculty',
             'first_name' => 'Tanzilla',
             'last_name'  => 'Wahid',
             'gender'     => 'F',
             'email'      => 'tangilla@gmail.com',
             'password'   => bcrypt('faculty'),
-            'created_at' => new DateTime,
-            'updated_at' => new DateTime
-        ]);
-
-        User::create([
-            'id'         => 8,
-            'type'       => 'admin',
-            'email'      => 'admin@dms.dev',
-            'password'   => bcrypt('admin'),
             'created_at' => new DateTime,
             'updated_at' => new DateTime
         ]);
@@ -153,50 +153,57 @@ class DMSTableSeeder extends Seeder {
         DB::table('levels')->insert($levels);
 
         Student::create([
-            'id'       => 1,
-            'batch'    => 25,
-            'program'  => 'bsc',
-            'level_id' => 1
-        ]);
-
-        Student::create([
             'id'       => 2,
             'batch'    => 25,
             'program'  => 'bsc',
-            'level_id' => 1
+            'level_id' => 1,
+            'user_id'  => 2
         ]);
 
         Student::create([
             'id'       => 3,
             'batch'    => 25,
             'program'  => 'bsc',
-            'level_id' => 1
+            'level_id' => 1,
+            'user_id'  => 3
         ]);
 
         Student::create([
             'id'       => 4,
             'batch'    => 25,
             'program'  => 'bsc',
-            'level_id' => 1
+            'level_id' => 1,
+            'user_id'  => 4
         ]);
 
         Student::create([
             'id'       => 5,
             'batch'    => 25,
             'program'  => 'bsc',
-            'level_id' => 1
+            'level_id' => 1,
+            'user_id'  => 5
+        ]);
+
+        Student::create([
+            'id'       => 6,
+            'batch'    => 25,
+            'program'  => 'bsc',
+            'level_id' => 1,
+            'user_id'  => 6
         ]);
 
         Faculty::create([
-            'id' => 6,
-            'designation' => 'lecturer',
-            'joining_date' => new DateTime
+            'id'           => 7,
+            'designation'  => 'lecturer',
+            'joining_date' => new DateTime,
+            'user_id'      => 7
         ]);
 
         Faculty::create([
-            'id' => 7,
-            'designation' => 'lecturer',
-            'joining_date' => new DateTime
+            'id'           => 8,
+            'designation'  => 'lecturer',
+            'joining_date' => new DateTime,
+            'user_id'      => 8
         ]);
 
         $courses = [

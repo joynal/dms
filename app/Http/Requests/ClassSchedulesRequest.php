@@ -28,7 +28,7 @@ class ClassSchedulesRequest extends Request {
             'day'       => 'required',
             'from'      => 'required',
             'to'        => 'required',
-            'room'      => 'required'
+            'campus'      => 'required'
 		];
 	}
 
