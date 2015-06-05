@@ -25,7 +25,7 @@ class CourseController extends Controller {
 	{
 		Course::create($request->all());
 
-        return Redirect::route('courses.index')
+        return Redirect::route('admin.courses.index')
                             ->with('message', 'Successfully course added into the course list');
 	}
 
@@ -57,7 +57,7 @@ class CourseController extends Controller {
 		$input = array_except($request->all(), '_method');
         $course->update($input);
 
-        return Redirect::route('courses.index')
+        return Redirect::route('admin.courses.index')
                             ->with('message', 'Successfully course updated');
 	}
 
@@ -70,7 +70,7 @@ class CourseController extends Controller {
 	{
 		$course->delete();
 
-        return Redirect::route('courses.index')
+        return Redirect::route('admin.courses.index')
                             ->with('message', 'Successfully course deleted.');
 	}
 

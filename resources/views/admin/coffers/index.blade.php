@@ -32,7 +32,7 @@
                                     {!! Form::open([
                                     'class' => 'form-inline',
                                     'method' => 'DELETE',
-                                    'route' => ['semesters.coffers.levels.destroy', $semester->id, $coffer->id, $level->id ]]) !!}
+                                    'route' => ['admin.semesters.coffers.levels.destroy', $semester->id, $coffer->id, $level->id ]]) !!}
 
                                     {!! Form::submit('x',['class' => 'btn btn-danger']) !!}
 
@@ -44,9 +44,9 @@
                             {!! Form::open([
                             'class' => 'form-inline',
                             'method' => 'DELETE',
-                            'route' => ['semesters.coffers.destroy', $semester->id, $coffer->id ]]) !!}
+                            'route' => ['admin.semesters.coffers.destroy', $semester->id, $coffer->id ]]) !!}
 
-                            {!! link_to_route('semesters.coffers.edit', 'Edit', [$semester->id, $coffer->id], ['class' => 'btn btn-info']) !!}
+                            {!! link_to_route('admin.semesters.coffers.edit', 'Edit', [$semester->id, $coffer->id], ['class' => 'btn btn-info']) !!}
                             {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
 
                             {!! Form::close() !!}
@@ -57,7 +57,7 @@
         </table>
 
         {!! Form::open([
-        'route' => ['semesters.coffers.store', $semester->id ],
+        'route' => ['admin.semesters.coffers.store', $semester->id ],
         'class' => 'form-inline',
         'novalidate' => 'novalidate' ]) !!}
 

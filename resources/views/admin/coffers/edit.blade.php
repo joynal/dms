@@ -4,7 +4,7 @@
 
     {!! Form::model($coffer, [
     'method'    => 'PATCH',
-    'route'     => ['semesters.coffers.update', $semester->id, $coffer->id],
+    'route'     => ['admin.semesters.coffers.update', $semester->id, $coffer->id],
     'class'     => 'form-inline',
     'novalidate'    => 'novalidate' ]) !!}
 

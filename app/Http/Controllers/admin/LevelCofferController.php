@@ -46,7 +46,7 @@ class LevelCofferController extends Controller {
             $coffer->students()->attach($student->id, ['status' => 'unenrolled']);
         }
 
-        return Redirect::route('semesters.coffers.index', [$semester->id])
+        return Redirect::route('admin.semesters.coffers.index', [$semester->id])
             ->with('message', 'Level successfully added.');
     }
 
@@ -67,7 +67,7 @@ class LevelCofferController extends Controller {
             $coffer->students()->detach($student->id);
         }
 
-        return Redirect::route('semesters.coffers.index', [$semester->id])
+        return Redirect::route('admin.semesters.coffers.index', [$semester->id])
             ->with('message', 'Level successfully deleted.');
     }
 

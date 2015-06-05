@@ -7,6 +7,7 @@ Route::model('courses', 'App\Models\Course');
 Route::model('class-schedules', 'App\Models\ClassSchedule');
 Route::model('exam-schedules', 'App\Models\ExamSchedule');
 Route::model('levels', 'App\Models\Level');
+Route::model('faculties', 'App\Models\Faculty');
 
 Route::bind('generates', function($value, $route){
     return App\Models\Registration::whereId($value)->first();
@@ -34,6 +35,10 @@ Route::bind('levels', function($value, $route){
     return App\Models\Level::whereId($value)->first();
 });
 
+Route::bind('faculties', function($value, $route){
+    return App\Models\Faculty::whereId($value)->first();
+});
+
 Route::get('/', ['as' => 'home', 'uses' => 'PagesController@index']);
 Route::get('home','HomeController@index');
 
@@ -58,17 +63,17 @@ Route::get('faculty', [
 Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function(){
 
     Route::resource('generates', 'Admin\GeneratesController');
+    Route::resource('courses', 'Admin\CourseController');
+    Route::resource('semesters', 'Admin\SemestersController');
+    Route::resource('semesters.coffers', 'Admin\CoffersController');
+    Route::resource('semesters.class-schedules', 'Admin\ClassScheduleController');
+    Route::resource('semesters.exam-schedules', 'Admin\ExamScheduleController');
+    Route::resource('semesters.coffers.levels', 'Admin\LevelCofferController');
+    Route::resource('semesters.class-schedules.levels', 'Admin\LevelClassController');
+    Route::resource('semesters.exam-schedules.levels', 'Admin\LevelExamController');
+    Route::resource('semesters.exam-schedules.faculties', 'Admin\FaqsExamController');
 
 });
-
-Route::resource('courses', 'Admin\CourseController');
-Route::resource('semesters', 'Admin\SemestersController');
-Route::resource('semesters.coffers', 'Admin\CoffersController');
-Route::resource('semesters.class-schedules', 'Admin\ClassScheduleController');
-Route::resource('semesters.exam-schedules', 'Admin\ExamScheduleController');
-Route::resource('semesters.coffers.levels', 'Admin\LevelCofferController');
-Route::resource('semesters.class-schedules.levels', 'Admin\LevelClassController');
-Route::resource('semesters.exam-schedules.levels', 'Admin\LevelExamController');
 
 Route::controllers([
     'auth' => 'Auth\AuthController',

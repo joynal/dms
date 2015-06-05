@@ -3,7 +3,7 @@
     <h2>create new semester</h2>
 
     {!! Form::open([
-        'route' => 'semesters.store',
+        'route' => 'admin.semesters.store',
         'class' => 'form-inline',
         'novalidate' => 'novalidate' ]) !!}
 
@@ -26,7 +26,7 @@
                 </tr>
                 @foreach($semesters as $semester)
                     <tr>
-                        <td><a href="{!! route('semesters.show', $semester->id) !!}">{!! $semester->name !!}</a></td>
+                        <td><a href="{!! route('admin.semesters.show', $semester->id) !!}">{!! $semester->name !!}</a></td>
                         <td>{!! $semester->year !!}</td>
                         <td>{!! $semester->form !!}</td>
                         <td>{!! $semester->to !!}</td>
@@ -34,9 +34,9 @@
                             {!! Form::open([
                             'class' => 'form-inline',
                             'method' => 'DELETE',
-                            'route' => ['semesters.destroy', $semester->id ]]) !!}
+                            'route' => ['admin.semesters.destroy', $semester->id ]]) !!}
 
-                            {!! link_to_route('semesters.edit', 'Edit', [$semester->id], ['class' => 'btn btn-info']) !!}
+                            {!! link_to_route('admin.semesters.edit', 'Edit', [$semester->id], ['class' => 'btn btn-info']) !!}
                             {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
 
                             {!! Form::close() !!}

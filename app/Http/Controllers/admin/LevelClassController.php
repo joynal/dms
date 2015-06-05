@@ -42,7 +42,7 @@ class LevelClassController extends Controller {
 
         $schedule->levels()->attach($level);
 
-        return Redirect::route('semesters.class-schedules.index', [$semester->id])
+        return Redirect::route('admin.semesters.class-schedules.index', [$semester->id])
             ->with('message', 'Level successfully added.');
 	}
 
@@ -55,7 +55,7 @@ class LevelClassController extends Controller {
 	{
         $schedule->levels()->detach($level->id);
 
-        return Redirect::route('semesters.class-schedules.index', [$semester->id])
+        return Redirect::route('admin.semesters.class-schedules.index', [$semester->id])
             ->with('message', 'Level successfully deleted.');
 	}
 

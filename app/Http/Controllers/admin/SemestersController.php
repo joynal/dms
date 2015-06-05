@@ -29,7 +29,7 @@ class SemestersController extends Controller {
 	{
 		Semester::create($request->all());
 
-        return Redirect::route('semesters.index')
+        return Redirect::route('admin.semesters.index')
                             ->with('message', 'Successfully semester created');
 	}
 
@@ -61,7 +61,7 @@ class SemestersController extends Controller {
 		$input = array_except($request->all(), '_method');
         $semester->update($input);
 
-        return Redirect::route('semesters.index')
+        return Redirect::route('admin.semesters.index')
                             ->with('message', 'Semester successfully updated!');
 	}
 
@@ -74,7 +74,7 @@ class SemestersController extends Controller {
 	{
 		$semester->delete();
 
-        return Redirect::route('semesters.index')
+        return Redirect::route('admin.semesters.index')
                             ->with('message', 'Successfully semester record deleted.');
 	}
 

@@ -20,7 +20,7 @@
                             {!! Form::open([
                             'class' => 'form-inline',
                             'method' => 'DELETE',
-                            'route' => ['semesters.class-schedules.levels.destroy', $semester->id, $schedule->id, $level->id ]]) !!}
+                            'route' => ['admin.semesters.class-schedules.levels.destroy', $semester->id, $schedule->id, $level->id ]]) !!}
 
                             {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
 
@@ -32,7 +32,7 @@
         </table>
 
         {!! Form::open([
-        'route' => ['semesters.class-schedules.levels.store', $semester->id, $schedule->id ],
+        'route' => ['admin.semesters.class-schedules.levels.store', $semester->id, $schedule->id ],
         'class' => 'form-inline',
         'novalidate' => 'novalidate' ]) !!}
 

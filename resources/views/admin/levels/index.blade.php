@@ -20,7 +20,7 @@
                             {!! Form::open([
                             'class' => 'form-inline',
                             'method' => 'DELETE',
-                            'route' => ['semesters.coffers.levels.destroy', $semester->id, $coffer->id, $level->id ]]) !!}
+                            'route' => ['admin.semesters.coffers.levels.destroy', $semester->id, $coffer->id, $level->id ]]) !!}
 
                             {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
 
@@ -32,7 +32,7 @@
         </table>
 
         {!! Form::open([
-        'route' => ['semesters.coffers.levels.store', $semester->id, $coffer->id ],
+        'route' => ['admin.semesters.coffers.levels.store', $semester->id, $coffer->id ],
         'class' => 'form-inline',
         'novalidate' => 'novalidate' ]) !!}
 

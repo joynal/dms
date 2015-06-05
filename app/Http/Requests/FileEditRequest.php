@@ -12,7 +12,7 @@ class FileEditRequest extends FileRequest {
 	 */
 	public function authorize()
 	{
-		return true;
+		return \Auth::check();
 	}
 
 	/**

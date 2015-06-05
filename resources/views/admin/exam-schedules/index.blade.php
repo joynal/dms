@@ -24,7 +24,21 @@
                         <td>{!! $schedule->name !!}</td>
                         <td>{!! $schedule->coffer->course->id !!}</td>
                         <td>{!! $schedule->coffer->course->name !!}</td>
-                        <td>{!! $schedule->coffer->faculty->user->first_name !!}</td>
+                        <td>
+                            @foreach($schedule->faculties as $faculty)
+                                <p>{!! $faculty->user->first_name !!}</p>
+                                <p>
+                                    {!! Form::open([
+                                    'class' => 'form-inline',
+                                    'method' => 'DELETE',
+                                    'route' => ['admin.semesters.exam-schedules.faculties.destroy', $semester->id, $schedule->id, $faculty->id ]]) !!}
+
+                                    {!! Form::submit('x',['class' => 'btn btn-danger']) !!}
+
+                                    {!! Form::close() !!}
+                                </p>
+                            @endforeach
+                        </td>
                         <td>{!! $schedule->date !!}</td>
                         <td>{!! $schedule->from !!}</td>
                         <td>{!! $schedule->to !!}</td>
@@ -32,15 +46,25 @@
                         <td>
                             @foreach($schedule->levels as $level)
                                 <p>{!! $level->batch !!} : {!! $level->section !!}</p>
+                                <p>
+                                    {!! Form::open([
+                                    'class' => 'form-inline',
+                                    'method' => 'DELETE',
+                                    'route' => ['admin.semesters.exam-schedules.levels.destroy', $semester->id, $schedule->id, $level->id ]]) !!}
+
+                                    {!! Form::submit('x',['class' => 'btn btn-danger']) !!}
+
+                                    {!! Form::close() !!}
+                                </p>
                             @endforeach
                         </td>
                         <td>
                             {!! Form::open([
                             'class' => 'form-inline',
                             'method' => 'DELETE',
-                            'route' => ['semesters.exam-schedules.destroy', $semester->id, $schedule->id ]]) !!}
+                            'route' => ['admin.semesters.exam-schedules.destroy', $semester->id, $schedule->id ]]) !!}
 
-                            {!! link_to_route('semesters.exam-schedules.edit', 'Edit', [$semester->id, $schedule->id], ['class'=> 'btn btn-info']) !!}
+                            {!! link_to_route('admin.emesters.exam-schedules.edit', 'Edit', [$semester->id, $schedule->id], ['class'=> 'btn btn-info']) !!}
                             {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
 
                             {!! Form::close() !!}

@@ -4,23 +4,23 @@
 
     <div class="col-lg-10">
         <table class="table">
-            @if( !$schedule->levels->count())
-                <p>No batch added yet</p>
+            @if( !$schedule->faculties->count())
+                <p>No faculty added yet</p>
             @else
                 <tr>
-                    <th>Batch</th>
-                    <th>Section</th>
+                    <th>Faculty Id</th>
+                    <th>Name</th>
                     <th>Actions</th>
                 </tr>
-                @foreach($schedule->levels as $level)
+                @foreach($schedule->faculties as $faculty)
                     <tr>
-                        <td>{!! $level->batch !!}</td>
-                        <td>{!! $level->section !!}</td>
+                        <td>{!! $faculty->user->uid !!}</td>
+                        <td>{!! $faculty->user->first_name !!}</td>
                         <td>
                             {!! Form::open([
                             'class' => 'form-inline',
                             'method' => 'DELETE',
-                            'route' => ['admin.semesters.exam-schedules.levels.destroy', $semester->id, $schedule->id, $level->id ]]) !!}
+                            'route' => ['admin.semesters.exam-schedules.faculties.destroy', $semester->id, $schedule->id, $faculty->id ]]) !!}
 
                             {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
 
@@ -32,18 +32,13 @@
         </table>
 
         {!! Form::open([
-        'route' => ['admin.semesters.exam-schedules.levels.store', $semester->id, $schedule->id ],
+        'route' => ['admin.semesters.exam-schedules.faculties.store', $semester->id, $schedule->id ],
         'class' => 'form-inline',
         'novalidate' => 'novalidate' ]) !!}
 
             <div class="form-group">
-                {!! Form::label('batch', 'Batch:') !!}
-                {!! Form::text('batch', Input::old('batch'), ['class' => 'form-control', 'placeholder' => 'batch']) !!}
-            </div>
-
-            <div class="form-group">
-                {!! Form::label('section', 'Section:') !!}
-                {!! Form::text('section', Input::old('section'), ['class' => 'form-control', 'placeholder' => 'section']) !!}
+                {!! Form::label('uid', 'Faculty Id:') !!}
+                {!! Form::text('uid', Input::old('uid'), ['class' => 'form-control', 'placeholder' => 'Faculty Id']) !!}
             </div>
 
             <div class="form-group">

@@ -49,7 +49,7 @@ class ExamScheduleController extends Controller {
         $exam->levels()->attach($level);
         $exam->faculties()->attach($faculty);
 
-        return Redirect::route('semesters.exam-schedules.index', $semester->id)
+        return Redirect::route('admin.semesters.exam-schedules.index', $semester->id)
                             ->with('message', 'Successfully exam-schedule created.');
 	}
 
@@ -63,7 +63,7 @@ class ExamScheduleController extends Controller {
 	{
 		$schedule->delete();
 
-        return Redirect::route('semesters.exam-schedules.index', $semester->id)
+        return Redirect::route('admin.semesters.exam-schedules.index', $semester->id)
                             ->with('message', 'Successfully exam-schedule record deleted');
 	}
 

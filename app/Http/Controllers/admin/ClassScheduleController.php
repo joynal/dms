@@ -39,7 +39,7 @@ class ClassScheduleController extends Controller {
         $class_schedule->semester_id = $semester->id;
         $class_schedule->save();
 
-        return Redirect::route('semesters.class-schedules.index', $semester->id)
+        return Redirect::route('admin.semesters.class-schedules.index', $semester->id)
                             ->with('message', 'Successfully class-schedule stored');
     }
 
@@ -52,7 +52,7 @@ class ClassScheduleController extends Controller {
     {
         $classSchedule->delete();
 
-        return Redirect::route('semesters.class-schedules.index', $semester->id)
+        return Redirect::route('admin.semesters.class-schedules.index', $semester->id)
                             ->with('message', 'Successfully class-schedule record deleted');
     }
 

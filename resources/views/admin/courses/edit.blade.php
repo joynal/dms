@@ -4,7 +4,7 @@
 
     {!! Form::model($course, [
     'method'    => 'PATCH',
-    'route'     => ['courses.update', $course->id],
+    'route'     => ['admin.courses.update', $course->id],
     'class'     => 'form-inline',
     'novalidate'    => 'novalidate' ]) !!}
 

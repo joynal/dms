@@ -34,7 +34,7 @@
                                     {!! Form::open([
                                     'class' => 'form-inline',
                                     'method' => 'DELETE',
-                                    'route' => ['semesters.class-schedules.levels.destroy', $semester->id, $schedule->id, $level->id ]]) !!}
+                                    'route' => ['admin.semesters.class-schedules.levels.destroy', $semester->id, $schedule->id, $level->id ]]) !!}
 
                                     {!! Form::submit('x',['class' => 'btn btn-danger']) !!}
 
@@ -46,9 +46,9 @@
                             {!! Form::open([
                             'class' => 'form-inline',
                             'method' => 'DELETE',
-                            'route' => ['semesters.class-schedules.destroy', $semester->id, $schedule->id ]]) !!}
+                            'route' => ['admin.semesters.class-schedules.destroy', $semester->id, $schedule->id ]]) !!}
 
-                            {!! link_to_route('semesters.class-schedules.edit', 'Edit', [$semester->id, $schedule->id], ['class'=> 'btn btn-info']) !!}
+                            {!! link_to_route('admin.semesters.class-schedules.edit', 'Edit', [$semester->id, $schedule->id], ['class'=> 'btn btn-info']) !!}
                             {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
 
                             {!! Form::close() !!}
@@ -65,7 +65,7 @@
     <hr/>
 
     {!! Form::open([
-    'route' => ['semesters.class-schedules.store', $semester->id],
+    'route' => ['admin.semesters.class-schedules.store', $semester->id],
     'class' => 'form-inline',
     'novalidate' => 'novalidate'
     ]) !!}

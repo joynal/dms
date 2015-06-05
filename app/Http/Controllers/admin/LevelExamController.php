@@ -1,6 +1,5 @@
 <?php namespace App\Http\Controllers\Admin;
 
-use App\Models\ClassSchedule;
 use Redirect;
 use App\Models\Semester;
 use App\Models\Level;
@@ -44,7 +43,7 @@ class LevelExamController extends Controller {
 
         $schedule->levels()->attach($level);
 
-        return Redirect::route('semesters.exam-schedules.index', [$semester->id])
+        return Redirect::route('admin.semesters.exam-schedules.index', [$semester->id])
             ->with('message', 'Level successfully added.');
 	}
 
@@ -57,7 +56,7 @@ class LevelExamController extends Controller {
 	{
 		$schedule->levels()->detach($level->id);
 
-        return Redirect::route('semesters.exam-schedules.index', [$semester->id])
+        return Redirect::route('admin.semesters.exam-schedules.index', [$semester->id])
             ->with('message', 'Level successfully deleted.');
 	}
 

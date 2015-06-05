@@ -2,7 +2,7 @@
 
 use App\Http\Requests\Request;
 
-class ClassSchedulesRequest extends Request {
+class FaqsExamRequest extends Request {
 
 	/**
 	 * Determine if the user is authorized to make this request.
@@ -22,13 +22,7 @@ class ClassSchedulesRequest extends Request {
 	public function rules()
 	{
 		return [
-			'program'   => 'required',
-            'batch'     => 'required',
-            'course_id' => 'required',
-            'day'       => 'required',
-            'from'      => 'required',
-            'to'        => 'required',
-            'campus'      => 'required'
+			'uid' => 'required'
 		];
 	}
 

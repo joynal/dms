@@ -36,7 +36,7 @@ class CoffersController extends Controller {
         $coffer->semester_id = $semester->id;
         $coffer->save();
 
-        return Redirect::route('semesters.show', $semester->id)
+        return Redirect::route('admin.semesters.show', $semester->id)
             ->with('message', 'Course offer successfully added.');
     }
 
@@ -67,7 +67,7 @@ class CoffersController extends Controller {
         $coffer->semester_id = $semester->id;
         $coffer->save();
 
-        return Redirect::route('semesters.show', $semester->id)
+        return Redirect::route('admin.semesters.show', $semester->id)
             ->with('message', 'Course offer successfully updated.');
     }
 
@@ -81,7 +81,7 @@ class CoffersController extends Controller {
     {
         $coffer->delete();
 
-        return Redirect::route('semesters.show', $semester->id)
+        return Redirect::route('admin.semesters.show', $semester->id)
             ->with('message', 'Successfully course offer deleted.');
     }
 

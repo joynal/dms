@@ -3,7 +3,7 @@
     <h2>Create new course</h2>
 
     {!! Form::open([
-    'route' => 'courses.store',
+    'route' => 'admin.courses.store',
     'class' => 'form-inline',
     'novalidate' => 'novalidate' ]) !!}
 
@@ -26,7 +26,7 @@
                 </tr>
                 @foreach($courses as $course)
                     <tr>
-                        <td><a href="{!! route('courses.show', $course->id) !!}">{!! $course->name !!}</a></td>
+                        <td><a href="{!! route('admin.courses.show', $course->id) !!}">{!! $course->name !!}</a></td>
                         <td>{!! $course->id !!}</td>
                         <td>{!! $course->credit !!}</td>
                         <td>{!! $course->program !!}</td>
@@ -34,9 +34,9 @@
                             {!! Form::open([
                             'class' => 'form-inline',
                             'method' => 'DELETE',
-                            'route' => ['courses.destroy', $course->id ]]) !!}
+                            'route' => ['admin.courses.destroy', $course->id ]]) !!}
 
-                            {!! link_to_route('courses.edit', 'Edit', [$course->id], ['class' => 'btn btn-info']) !!}
+                            {!! link_to_route('admin.courses.edit', 'Edit', [$course->id], ['class' => 'btn btn-info']) !!}
                             {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
 
                             {!! Form::close() !!}
