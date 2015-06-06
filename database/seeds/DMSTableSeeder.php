@@ -96,19 +96,6 @@ class DMSTableSeeder extends Seeder {
 
         User::create([
             'id'         => 6,
-            'uid'        => 'M21132111009',
-            'type'       => 'student',
-            'first_name' => 'Joynal',
-            'last_name'  => 'Abedin',
-            'gender'     => 'M',
-            'email'      => 'joynal@gmail.com',
-            'password'   => bcrypt('student'),
-            'created_at' => new DateTime,
-            'updated_at' => new DateTime
-        ]);
-
-        User::create([
-            'id'         => 7,
             'uid'        => 'T21132221001',
             'type'       => 'faculty',
             'first_name' => 'Uttam Kumar',
@@ -121,7 +108,7 @@ class DMSTableSeeder extends Seeder {
         ]);
 
         User::create([
-            'id'         => 8,
+            'id'         => 7,
             'uid'        => 'T21132221002',
             'type'       => 'faculty',
             'first_name' => 'Tanzilla',
@@ -184,12 +171,11 @@ class DMSTableSeeder extends Seeder {
             'user_id'  => 5
         ]);
 
-        Student::create([
-            'id'       => 6,
-            'batch'    => 25,
-            'program'  => 'bsc',
-            'level_id' => 1,
-            'user_id'  => 6
+        Faculty::create([
+            'id'           => 6,
+            'designation'  => 'lecturer',
+            'joining_date' => new DateTime,
+            'user_id'      => 6
         ]);
 
         Faculty::create([
@@ -197,13 +183,6 @@ class DMSTableSeeder extends Seeder {
             'designation'  => 'lecturer',
             'joining_date' => new DateTime,
             'user_id'      => 7
-        ]);
-
-        Faculty::create([
-            'id'           => 8,
-            'designation'  => 'lecturer',
-            'joining_date' => new DateTime,
-            'user_id'      => 8
         ]);
 
         $courses = [

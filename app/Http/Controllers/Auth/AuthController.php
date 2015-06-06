@@ -1,5 +1,8 @@
 <?php namespace App\Http\Controllers\Auth;
 
+use Redirect;
+use App\Models\Registration;
+use App\Models\Level;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Contracts\Auth\Guard;
@@ -63,6 +66,49 @@ class AuthController extends Controller {
             ->withErrors([
                 'email' => $this->getFailedLoginMessage(),
             ]);
+    }
+
+
+    public function getRegister($confirmation)
+    {
+        $registration = Registration::whereConfirmation($confirmation)->firstOrFail();
+        return view('auth.register', compact('registration'));
+    }
+
+
+    public function postRegister(Request $request, $confirmation)
+    {
+        $registration = Registration::whereConfirmation($confirmation)->first();
+
+        $request['uid'] = $registration->uu_id;
+
+        $validator = $this->registrar->validator($request->all());
+        if ($validator->fails())
+        {
+            $this->throwValidationException(
+                $request, $validator
+            );
+        }
+
+        $request['type'] = $registration->type;
+        $request['program'] = $registration->program;
+
+        if (Level::whereBatch($request->get('batch'))->whereSection($request->get('section'))->first())
+        {
+            $level = Level::whereBatch($request->get('batch'))->whereSection($request->get('section'))->first();
+        } else
+        {
+            $level = new Level;
+            $level->batch = $request->get('batch');
+            $level->section = $request->get('section');
+            $level->save();
+        }
+
+        $request['level_id'] = $level->id;
+
+        $this->auth->login($this->registrar->create($request->all()));
+
+        return redirect($this->redirectPath());
     }
 
 

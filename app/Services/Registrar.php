@@ -1,41 +1,63 @@
 <?php namespace App\Services;
 
 use App\Models\User;
+use App\Models\Student;
 use Validator;
 use Illuminate\Contracts\Auth\Registrar as RegistrarContract;
 
 class Registrar implements RegistrarContract {
 
-	/**
-	 * Get a validator for an incoming registration request.
-	 *
-	 * @param  array  $data
-	 * @return \Illuminate\Contracts\Validation\Validator
-	 */
-	public function validator(array $data)
-	{
-		return Validator::make($data, [
-			'first_name' => 'required|max:100',
-			'last_name' => 'required|max:100',
-			'email' => 'required|email|max:255|unique:users',
-			'password' => 'required|confirmed|min:5',
-		]);
-	}
+    /**
+     * Get a validator for an incoming registration request.
+     *
+     * @param  array $data
+     * @return \Illuminate\Contracts\Validation\Validator
+     */
+    public function validator(array $data)
+    {
+        return Validator::make($data, [
+            'uid'       => 'required|unique:users',
+            'first_name' => 'required|max:100',
+            'last_name'  => 'required|max:100',
+            'email'      => 'required|email|max:255|unique:users',
+            'batch'      => 'required',
+            'birth_date' => 'required',
+            'gender'     => 'required',
+            'password'   => 'required|confirmed|min:5',
+        ]);
+    }
 
-	/**
-	 * Create a new user instance after a valid registration.
-	 *
-	 * @param  array  $data
-	 * @return User
-	 */
-	public function create(array $data)
-	{
-		return User::create([
-			'first_name' => $data['first_name'],
-			'last_name' => $data['last_name'],
-			'email' => $data['email'],
-			'password' => bcrypt($data['password']),
-		]);
-	}
+    /**
+     * Create a new user instance after a valid registration.
+     *
+     * @param  array $data
+     * @return User
+     */
+    public function create(array $data)
+    {
+        $user = User::create([
+            'uid'        => $data['uid'],
+            'type'       => $data['type'],
+            'first_name' => $data['first_name'],
+            'last_name'  => $data['last_name'],
+            'gender'     => $data['gender'],
+            'email'      => $data['email'],
+            'password'   => bcrypt($data['password']),
+        ]);
+
+        Student::create([
+            'id'             => $user->id,
+            'batch'          => $data['batch'],
+            'section'        => $data['section'],
+            'program'        => $data['program'],
+            'reg_id'         => $data['reg_id'],
+            'birth_date'     => $data['birth_date'],
+            'admission_date' => $data['admission_date'],
+            'level_id'       => $data['level_id'],
+            'user_id'        => $user->id
+        ]);
+
+        return $user;
+    }
 
 }

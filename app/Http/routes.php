@@ -8,6 +8,7 @@ Route::model('class-schedules', 'App\Models\ClassSchedule');
 Route::model('exam-schedules', 'App\Models\ExamSchedule');
 Route::model('levels', 'App\Models\Level');
 Route::model('faculties', 'App\Models\Faculty');
+Route::model('register', 'App\Models\Registration');
 
 Route::bind('generates', function($value, $route){
     return App\Models\Registration::whereId($value)->first();
@@ -37,6 +38,10 @@ Route::bind('levels', function($value, $route){
 
 Route::bind('faculties', function($value, $route){
     return App\Models\Faculty::whereId($value)->first();
+});
+
+Route::bind('register', function($value, $route){
+    return App\Models\Registration::whereId($value)->first();
 });
 
 Route::get('/', ['as' => 'home', 'uses' => 'PagesController@index']);
@@ -75,7 +80,12 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function(){
 
 });
 
+
+Route::get('auth/register/{confirmation}', 'Auth\AuthController@getRegister');
+Route::post('auth/register/{confirmation}', 'Auth\AuthController@postRegister');
+Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
 Route::controllers([
-    'auth' => 'Auth\AuthController',
     'password' => 'Auth\PasswordController',
 ]);
