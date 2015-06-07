@@ -1,6 +1,6 @@
 ## Department Management System(DMS) with Laravel-5 ##
 
-**[DMS](http://www.cse.uttarauniversity.edu.bd)** is a student admission training center.
+**[DMS](http://www.cse.uttarauniversity.edu.bd)** is a Department Management System Software.
 
 ### Installation ###
 
