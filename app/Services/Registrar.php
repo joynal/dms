@@ -25,6 +25,7 @@ class Registrar implements RegistrarContract {
             'batch'      => 'required',
             'birth_date' => 'required',
             'gender'     => 'required',
+            'image'      => 'required|mimes:png,jpg,jpeg',
             'password'   => 'required|confirmed|min:5',
         ]);
     }
@@ -43,6 +44,7 @@ class Registrar implements RegistrarContract {
             'joining_date' => 'required',
             'designation'  => 'required',
             'gender'       => 'required',
+            'image'      => 'required|mimes:png,jpg,jpeg',
             'password'     => 'required|confirmed|min:5',
         ]);
     }
@@ -62,6 +64,7 @@ class Registrar implements RegistrarContract {
             'last_name'  => $data['last_name'],
             'gender'     => $data['gender'],
             'email'      => $data['email'],
+            'image'      => $data['img'],
             'password'   => bcrypt($data['password']),
         ]);
 
@@ -92,6 +95,7 @@ class Registrar implements RegistrarContract {
             'last_name'  => $data['last_name'],
             'gender'     => $data['gender'],
             'email'      => $data['email'],
+            'image'      => $data['img'],
             'password'   => bcrypt($data['password']),
         ]);
 

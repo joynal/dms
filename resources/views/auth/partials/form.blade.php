@@ -72,6 +72,27 @@
     </div>
 
     <div class="form-group">
+        <label class="col-md-4 control-label">Contact</label>
+        <div class="col-md-6">
+            <input type="number" class="form-control" name="contact" value="{{ old('contact') }}">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-4 control-label">Social site</label>
+        <div class="col-md-6">
+            <input type="text" class="form-control" name="socialite" value="{{ old('socialite') }}">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="image" class = col-md-4 control-label="class = col-md-4 control-label">Image:</label>
+        <div class="col-md-6">
+            <input name="image" type="file" id="image">
+        </div>
+    </div>
+
+    <div class="form-group">
         <label class="col-md-4 control-label">Password</label>
         <div class="col-md-6">
             <input type="password" class="form-control" name="password">
@@ -84,6 +105,7 @@
             <input type="password" class="form-control" name="password_confirmation">
         </div>
     </div>
+
 
     <div class="form-group">
         <div class="col-md-6 col-md-offset-4">

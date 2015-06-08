@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Contracts\Auth\Registrar;
+use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\File;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
 class AuthController extends Controller {
@@ -107,6 +109,12 @@ class AuthController extends Controller {
                 );
             }
 
+            $image = $request->file('image');
+            $extension = $image->getClientOriginalExtension();
+            $imageName = str_random(20) . '.' . $extension;
+            $image->move(base_path() . '/public/fileStorage/image/', $imageName);
+            $request['img'] = $imageName;
+
             $request['type'] = $registration->type;
             $request['program'] = $registration->program;
 
@@ -137,7 +145,14 @@ class AuthController extends Controller {
                     $request, $validator
                 );
             }
+
+            $image = $request->file('image');
+            $extension = $image->getClientOriginalExtension();
+            $imageName = str_random(20) . '.' . $extension;
+            $image->move(base_path() . '/public/fileStorage/image/', $imageName);
+            $request['img'] = $imageName;
             $request['type'] = $registration->type;
+
             $this->auth->login($this->registrar->createFaculty($request->all()));
 
             return redirect()

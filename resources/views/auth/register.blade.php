@@ -18,7 +18,8 @@
 						</div>
 					@endif
 
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/auth/register/' . $registration->confirmation) }}">
+                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/auth/register/' . $registration->confirmation) }}"
+                          novalidate="novalidate" enctype="multipart/form-data">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                             @if($registration->type == "student")
