@@ -21,7 +21,7 @@
 
 <div class="form-group">
     {!! Form::label('uu_id', 'University Id:') !!}
-    {!! Form::text('uu_id', Input::old('uu_id'), ['class' => 'form-control', 'placeholder' => 'Student ID']) !!}
+    {!! Form::text('uu_id', Input::old('uu_id'), ['class' => 'form-control', 'placeholder' => 'University Id']) !!}
 </div>
 
 <div class="form-group">

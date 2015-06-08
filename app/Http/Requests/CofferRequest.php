@@ -25,8 +25,7 @@ class CofferRequest extends Request {
             'program'   => 'required',
             'year'      => 'required',
             'course_id' => 'required',
-            'uid'       => 'required',
-            'batch'     => 'required'
+            'uid'       => 'required'
         ];
     }
 

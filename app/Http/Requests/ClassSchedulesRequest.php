@@ -23,7 +23,6 @@ class ClassSchedulesRequest extends Request {
 	{
 		return [
 			'program'   => 'required',
-            'batch'     => 'required',
             'course_id' => 'required',
             'day'       => 'required',
             'from'      => 'required',

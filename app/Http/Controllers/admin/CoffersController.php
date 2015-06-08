@@ -36,7 +36,7 @@ class CoffersController extends Controller {
         $coffer->semester_id = $semester->id;
         $coffer->save();
 
-        return Redirect::route('admin.semesters.show', $semester->id)
+        return Redirect::route('admin.semesters.coffers.index', $semester->id)
             ->with('message', 'Course offer successfully added.');
     }
 

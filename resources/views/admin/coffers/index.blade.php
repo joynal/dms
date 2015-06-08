@@ -34,7 +34,9 @@
                                     'method' => 'DELETE',
                                     'route' => ['admin.semesters.coffers.levels.destroy', $semester->id, $coffer->id, $level->id ]]) !!}
 
-                                    {!! Form::submit('x',['class' => 'btn btn-danger']) !!}
+                                    <div>
+                                        <button type="submit" class="glyphicon glyphicon-remove"></button>
+                                    </div>
 
                                     {!! Form::close() !!}
                                 </p>

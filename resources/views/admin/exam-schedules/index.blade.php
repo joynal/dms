@@ -52,7 +52,9 @@
                                     'method' => 'DELETE',
                                     'route' => ['admin.semesters.exam-schedules.levels.destroy', $semester->id, $schedule->id, $level->id ]]) !!}
 
-                                    {!! Form::submit('x',['class' => 'btn btn-danger']) !!}
+                                    <div>
+                                        <button type="submit" class="glyphicon glyphicon-remove"></button>
+                                    </div>
 
                                     {!! Form::close() !!}
                                 </p>

@@ -23,8 +23,6 @@ class GenerateRequest extends Request {
 	{
 		return [
 			'type' => 'required',
-            'program' => 'required',
-            'batch' => 'required|integer',
             'uu_id' => 'required',
             'email' => 'required',
 		];
