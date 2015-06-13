@@ -49,11 +49,11 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     }
 
     public function student(){
-        $this->hasOne('App\Models\Student', 'user_id');
+        return $this->hasOne('App\Models\Student', 'user_id');
     }
 
     public function faculty(){
-        $this->hasOne('App\Models\Faculty', 'user_id');
+        return $this->hasOne('App\Models\Faculty', 'user_id');
     }
 
 }

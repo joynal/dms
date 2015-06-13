@@ -10,62 +10,72 @@ Route::model('levels', 'App\Models\Level');
 Route::model('faculties', 'App\Models\Faculty');
 Route::model('register', 'App\Models\Registration');
 
-Route::bind('generates', function($value, $route){
+Route::bind('generates', function ($value, $route)
+{
     return App\Models\Registration::whereId($value)->first();
 });
-Route::bind('semesters', function($value, $route){
+Route::bind('semesters', function ($value, $route)
+{
     return App\Models\Semester::whereId($value)->first();
 });
-Route::bind('coffers', function($value, $route){
+Route::bind('coffers', function ($value, $route)
+{
     return App\Models\Coffer::whereId($value)->first();
 });
 
-Route::bind('courses', function($value, $route){
+Route::bind('courses', function ($value, $route)
+{
     return App\Models\Course::whereId($value)->first();
 });
 
-Route::bind('class-schedules', function($value, $route){
+Route::bind('class-schedules', function ($value, $route)
+{
     return App\Models\ClassSchedule::whereId($value)->first();
 });
 
-Route::bind('exam-schedules', function($value, $route){
+Route::bind('exam-schedules', function ($value, $route)
+{
     return App\Models\ExamSchedule::whereId($value)->first();
 });
 
-Route::bind('levels', function($value, $route){
+Route::bind('levels', function ($value, $route)
+{
     return App\Models\Level::whereId($value)->first();
 });
 
-Route::bind('faculties', function($value, $route){
+Route::bind('faculties', function ($value, $route)
+{
     return App\Models\Faculty::whereId($value)->first();
 });
 
-Route::bind('register', function($value, $route){
+Route::bind('register', function ($value, $route)
+{
     return App\Models\Registration::whereId($value)->first();
 });
 
 Route::get('/', ['as' => 'home', 'uses' => 'PagesController@index']);
-Route::get('home','HomeController@index');
+Route::get('home', 'HomeController@index');
 
 Route::get('admin', [
-    'as' => 'admin',
-    'uses' => 'Admin\AdminController@index',
+    'as'         => 'admin',
+    'uses'       => 'Admin\AdminController@index',
     'middleware' => 'admin'
 ]);
 
 Route::get('student', [
-    'as' => 'student',
-    'uses' => 'Student\StudentController@index',
+    'as'         => 'student',
+    'uses'       => 'Student\StudentController@index',
     'middleware' => 'student'
 ]);
 
 Route::get('faculty', [
-    'as' => 'faculty',
-    'uses' => 'Faculty\FacultyController@index',
+    'as'         => 'faculty',
+    'uses'       => 'Faculty\FacultyController@index',
     'middleware' => 'faculty'
 ]);
 
-Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function(){
+Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function ()
+{
 
     Route::resource('generates', 'Admin\GeneratesController');
     Route::resource('courses', 'Admin\CourseController');
@@ -78,6 +88,17 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function(){
     Route::resource('semesters.exam-schedules.levels', 'Admin\LevelExamController');
     Route::resource('semesters.exam-schedules.faculties', 'Admin\FaqsExamController');
 
+});
+
+Route::group(['prefix' => 'student', 'middleware' => 'student'], function ()
+{
+    Route::get('overview', ['as' => 'overview', 'uses' => 'Student\StudentController@overview']);
+    Route::get('my-courses', ['as' => 'my-courses', 'uses' => 'Student\StudentController@myCourses']);
+    Route::get('my-class-schedules', [
+        'as' => 'my-class-schedules', 'uses' => 'Student\StudentController@myClassSchedules']);
+    Route::get('my-exam-schedules', [
+        'as' => 'my-exam-schedules', 'uses' => 'Student\StudentController@myExamSchedules']);
+    Route::get('my-results', ['as' => 'my-results', 'uses' => 'Student\StudentController@myResults']);
 });
 
 

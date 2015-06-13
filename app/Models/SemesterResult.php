@@ -11,5 +11,4 @@ class SemesterResult extends Model {
     public function student(){
         return $this->belongsTo('App\Models\Student');
     }
-
 }
