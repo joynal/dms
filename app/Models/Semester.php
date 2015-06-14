@@ -21,4 +21,8 @@ class Semester extends Model {
     public function examSchedules(){
         return $this->hasMany('App\Models\ExamSchedule');
     }
+
+    public function semesterResults(){
+        return $this->hasMany('App\Models\SemesterResult');
+    }
 }

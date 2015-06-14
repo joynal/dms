@@ -37,7 +37,7 @@
 
 <div class="form-group">
     {!! Form::label('date', 'To:') !!}
-    {!! Form::input('date', 'date', date('d-m-y'), Input::old('date'), ['class' => 'form-control']) !!}
+    {!! Form::input('date', 'date', date('d-m-y'), ['class' => 'form-control']) !!}
 </div>
 
 <div class="form-group">

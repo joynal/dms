@@ -1,7 +1,7 @@
 @extends('app')
 @section('content')
     @if( !$results->count() )
-        <p>There is no semester results yet</p>
+        <h4>There is no semester results yet</h4>
     @else
         <tr>
             <th>Semester name</th>
@@ -10,7 +10,9 @@
         </tr>
         @foreach( $results as $result)
             <tr>
-                <td>$result-></td>
+                <td>$result->semester->name</td>
+                <td>$result->semester->year</td>
+                <td>$result->sgpa</td>
             </tr>
         @endforeach
         {{ dd($student) }}

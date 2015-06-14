@@ -66,7 +66,7 @@
                             'method' => 'DELETE',
                             'route' => ['admin.semesters.exam-schedules.destroy', $semester->id, $schedule->id ]]) !!}
 
-                            {!! link_to_route('admin.emesters.exam-schedules.edit', 'Edit', [$semester->id, $schedule->id], ['class'=> 'btn btn-info']) !!}
+                            {!! link_to_route('admin.semesters.exam-schedules.edit', 'Edit', [$semester->id, $schedule->id], ['class'=> 'btn btn-info']) !!}
                             {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
 
                             {!! Form::close() !!}
@@ -83,7 +83,7 @@
     <hr/>
 
     {!! Form::open([
-    'route' => ['semesters.exam-schedules.store', $semester->id],
+    'route' => ['admin.semesters.exam-schedules.store', $semester->id],
     'class' => 'form-inline',
     'novalidate' => 'novalidate'
     ]) !!}

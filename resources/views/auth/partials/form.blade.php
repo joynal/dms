@@ -50,14 +50,14 @@
     <div class="form-group">
         <label class="col-md-4 control-label">Birth Date</label>
         <div class="col-md-6">
-            <input type="date" class="form-control" name="birth_date" value="{{ old('birth_date') }}">
+            <input type="date" class="form-control" name="birth_date" value="{{ date('d-m-y') }}">
         </div>
     </div>
 
     <div class="form-group">
         <label class="col-md-4 control-label">University Admission date</label>
         <div class="col-md-6">
-            <input type="date" class="form-control" name="admission_date" value="{{ old('admission_date') }}">
+            <input type="date" class="form-control" name="admission_date" value="{{ date('d-m-y') }}">
         </div>
     </div>
 

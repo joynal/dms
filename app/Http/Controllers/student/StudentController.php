@@ -10,9 +10,7 @@ class StudentController extends Controller {
     public function overview()
     {
 
-        dd(Auth::user()->student->semesterResults);
-        $student = Student::find(Auth::user()->id);
-        $results = $student->semesterResults;
+        $results = Auth::user()->student->semesterResults;
 
         return view('students.overviews', compact('results'));
     }

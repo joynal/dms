@@ -8,7 +8,7 @@
 
 <div class="form-group">
     {!! Form::label('course_id', 'Course Id:') !!}
-    {!! Form::text('course_id', Input::old('course_id'), ['class' => 'form-control', 'placeholder' => 'faculty Id']) !!}
+    {!! Form::text('course_id', Input::old('course_id'), ['class' => 'form-control', 'placeholder' => 'course Id']) !!}
 </div>
 
 <div class="form-group">
