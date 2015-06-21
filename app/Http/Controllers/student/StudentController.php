@@ -1,8 +1,8 @@
 <?php namespace App\Http\Controllers\Student;
 
 use Auth;
+use App\Models\Semester;
 use App\Http\Requests;
-use App\Models\Student;
 use App\Http\Controllers\Controller;
 
 class StudentController extends Controller {
@@ -17,7 +17,10 @@ class StudentController extends Controller {
 
     public function myCourses()
     {
+        $semester = Semester::latest();
+        $enrolled = Auth::user()->student->coffers->whereSemesterId($semester->id);
 
+        dd($enrolled);
     }
 
     public function myClassSchedules()
