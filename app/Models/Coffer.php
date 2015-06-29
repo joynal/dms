@@ -11,11 +11,11 @@ class Coffer extends Model {
     ];
 
     public function students(){
-        return $this->belongsToMany('App\Models\Student', 'coffer_student', 'coffer_id', 'student_id')->withPivot('status');
+        return $this->belongsToMany('App\Models\Student')->withPivot('status');
     }
 
     public function examSchedules(){
-        return $this->hasMany('App\Models\ExamSchedule');
+        return $this->hasOne('App\Models\ExamSchedule');
     }
 
     public function classSchedules(){

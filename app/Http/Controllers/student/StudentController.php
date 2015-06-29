@@ -1,11 +1,15 @@
 <?php namespace App\Http\Controllers\Student;
 
 use Auth;
-use App\Models\Semester;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 class StudentController extends Controller {
+
+    public function index()
+    {
+        return "Welcome to home";
+    }
 
     public function overview()
     {
@@ -17,25 +21,35 @@ class StudentController extends Controller {
 
     public function myCourses()
     {
-        $semester = Semester::latest();
-        $enrolled = Auth::user()->student->coffers->whereSemesterId($semester->id);
+        $coffers = Auth::user()->student->coffers;
 
-        dd($enrolled);
+        return view('students.courses', compact('coffers'));
+    }
+
+    public function myCoursesPost()
+    {
+
     }
 
     public function myClassSchedules()
     {
+        $coffers = Auth::user()->student->coffers;
 
+        return view('students.class', compact('coffers'));
     }
 
     public function myExamSchedules()
     {
+        $coffers =  Auth::user()->student->coffers;
 
+        return view('students.exam', compact('coffers'));
     }
 
     public function myResults()
     {
+        $coffers = Auth::user()->student->courseResults;
 
+        return view('students.course_results', compact('coffers'));
     }
 
 }

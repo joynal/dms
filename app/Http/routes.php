@@ -94,6 +94,7 @@ Route::group(['prefix' => 'student', 'middleware' => 'student'], function ()
 {
     Route::get('overview', ['as' => 'overview', 'uses' => 'Student\StudentController@overview']);
     Route::get('my-courses', ['as' => 'my-courses', 'uses' => 'Student\StudentController@myCourses']);
+    Route::post('my-courses', ['as' => 'my-courses-post', 'uses' => 'Student\StudentController@myCoursesPost']);
     Route::get('my-class-schedules', [
         'as' => 'my-class-schedules', 'uses' => 'Student\StudentController@myClassSchedules']);
     Route::get('my-exam-schedules', [

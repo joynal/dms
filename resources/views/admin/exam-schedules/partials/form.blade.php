@@ -7,17 +7,6 @@
 </div>
 
 <div class="form-group">
-    {!! Form::label('batch', 'Batch:') !!}
-    {!! Form::text('batch', Input::old('batch'), ['class' => 'form-control', 'placeholder' => 'batch']) !!}
-</div>
-
-
-<div class="form-group">
-    {!! Form::label('section', 'Section:') !!}
-    {!! Form::text('section', Input::old('section'), ['class' => 'form-control', 'placeholder' => 'section']) !!}
-</div>
-
-<div class="form-group">
     {!! Form::label('course_id', 'Course Id:') !!}
     {!! Form::text('course_id', Input::old('course_id'), ['class' => 'form-control', 'placeholder' => 'Course Id']) !!}
 </div>
